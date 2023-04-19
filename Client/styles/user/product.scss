@@ -1,0 +1,1091 @@
+@import '../app.module.scss';
+
+@keyframes ratingbarloading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.singleProduct {
+    margin-top: 2em;
+
+    .ReviewRating {
+
+        .AddReview {
+            width: 7em;
+            height: 2.2em;
+            border: 3px solid $MainBLack;
+            background: $MainBLack;
+            font-size: small;
+            color: white;
+            border-radius: 3px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+
+            &:hover {
+                background: white;
+                color: $MainBLack;
+            }
+        }
+
+        .Reviews {
+            margin-top: 1em;
+            border: 1px solid $MainLtGrey;
+
+            .loadMore {
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin-left: 1em;
+                width: 7em;
+                height: 2.2em;
+                border: 3px solid $Main2ndGreen;
+                background: $Main2ndGreen;
+                font-size: small;
+                color: white;
+                border-radius: 3px;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: all .5s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+
+            .cardReview {
+                padding: 1em;
+                border-bottom: 1px solid $MainLtGrey ;
+
+                .rowCard {
+                    display: grid;
+                    grid-template-columns: 50px auto;
+
+                    .rating {
+                        color: white;
+                        font-size: x-small;
+                        background: $Main2ndGreen;
+                        border: 3px solid $Main2ndGreen;
+                        width: 40px;
+                        border-radius: 3px;
+                        font-weight: bold;
+                        cursor: text;
+                    }
+
+                    .reviewTitle {
+                        padding-top: 3px;
+                        overflow-x: auto;
+                    }
+                }
+
+                .rowCardOwnReview {
+                    display: grid;
+                    grid-template-columns: 50px auto auto;
+
+                    .rating {
+                        color: white;
+                        font-size: x-small;
+                        background: $Main2ndGreen;
+                        border: 3px solid $Main2ndGreen;
+                        width: 40px;
+                        border-radius: 3px;
+                        font-weight: bold;
+                        cursor: text;
+                    }
+
+                    .reviewTitle {
+                        padding-top: 3px;
+                        overflow-x: auto;
+                    }
+
+                    .delete {
+                        color: white;
+                        font-size: x-small;
+                        background: $Main2ndGreen;
+                        border: 3px solid $Main2ndGreen;
+                        width: 4.5em;
+                        text-transform: uppercase;
+                        border-radius: 3px;
+                        font-weight: bold;
+                        float: right;
+                    }
+                }
+
+                .reviewContent {
+                    color: $MainBLack;
+                    overflow-x: auto;
+                    font-size: small;
+                }
+
+            }
+        }
+
+        .RatingBars {
+            .text-smaller {
+                font-size: 11px;
+            }
+
+            .barBody {
+                margin-top: 10px;
+                width: 100%;
+                background-color: #f1f1f1;
+                border-radius: 10px;
+
+                .bar-5 {
+                    animation: ratingbarloading 1s linear;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #04AA6D;
+                }
+
+                .bar-4 {
+                    animation: ratingbarloading 1s linear;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #2196F3;
+                }
+
+                .bar-3 {
+                    animation: ratingbarloading 1s linear;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #00bcd4;
+                }
+
+                .bar-2 {
+                    animation: ratingbarloading 1s linear;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #ff9800;
+                }
+
+                .bar-1 {
+                    animation: ratingbarloading 1s linear;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: #f44336;
+                }
+            }
+        }
+
+    }
+
+    .desktope {
+        margin-bottom: 3em;
+        display: block;
+        width: 100%;
+        clear: both;
+
+        &:before,
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+
+        .leftDiv {
+            width: 40%;
+            float: left;
+            position: sticky;
+            top: 90px;
+            height: 100%;
+
+            .SlidDivBorder {
+                border: 1px solid $MainLtGrey;
+                border-radius: 3px;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-bottom: 1em;
+                height: 100%;
+
+                .MainimgDiv {
+                    text-align: center;
+
+                    .Mainimg {
+                        width: 80%;
+                        height: auto;
+                        padding: 20px;
+                    }
+                }
+
+                .ThumbDiv {
+                    text-align: center;
+
+                    .ThumbSingle {
+                        transition: all 1s;
+                        -moz-transition: all 1s;
+                        transition-timing-function: ease-in-out;
+                        -moz-transition-timing-function: ease-in-out;
+                        width: 90%;
+                        height: 90px;
+                        border: 1px solid $MainLtGrey;
+                        padding: 5px;
+
+                        @media only screen and (max-width: 1189px) {
+                            height: 70px;
+                        }
+
+                        @media only screen and (max-width: 991px) {
+                            height: 50px;
+                        }
+                    }
+                }
+
+                .swiper-slide-thumb-active {
+                    .ThumbSingle {
+                        transition: all 1s;
+                        -moz-transition: all 1s;
+                        transition-timing-function: ease-in-out;
+                        -moz-transition-timing-function: ease-in-out;
+                        border: 1px solid $MainBLack;
+                    }
+                }
+            }
+        }
+
+        .rightDiv {
+            width: 58%;
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+
+            .content {
+                .TitleShareDiv {
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+
+                    @media only screen and (max-width: 991px) {
+                        grid-template-columns: 85% 12%;
+                    }
+
+                    button {
+                        float: right;
+                        height: 40px;
+                        width: 40px;
+                        border: 1px solid $MainLtGrey;
+                        background: white;
+                        color: $MainBLack;
+                        font-size: large;
+                        border-radius: 50%;
+                        transition: all .5s;
+                        -moz-transition: all .5s;
+                        transition-timing-function: ease-in-out;
+                        -moz-transition-timing-function: ease-in-out;
+
+                        &:hover {
+                            background: $Main2ndGreen;
+                            border-color: $Main2ndGreen;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .variantArea {
+                button {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                    border-radius: 3px;
+                    border: 2px solid $MainBgGray;
+                    background: $MainBgGray;
+                    color: $MainBLack;
+                    font-size: small;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                }
+
+                button[data-type="active"] {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                    border-radius: 3px;
+                    border: 2px solid $MainGreen;
+                    background: $MainBgGray;
+                    color: $MainBLack;
+                    font-size: small;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                }
+            }
+
+            .BuyDiv {
+                margin-top: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: grid;
+                grid-template-columns: 120px 160px auto;
+                border-top: 1px solid $MainLtGrey;
+                border-bottom: 1px solid $MainLtGrey;
+
+                @media only screen and (max-width: 991px) {
+                    grid-template-columns: 120px 140px auto;
+                }
+
+                .quantityDiv {
+                    display: flex;
+
+                    .btnMinus {
+                        height: 45px;
+                        width: 30px;
+                        border: 1px solid $MainLtGrey;
+                        background: transparent;
+                        border-top-left-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+
+                    .btnPlus {
+                        height: 45px;
+                        width: 30px;
+                        border: 1px solid $MainLtGrey;
+                        background: transparent;
+                        border-top-right-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+
+                    input {
+                        width: 50px;
+                        height: 45px;
+                        text-align: center;
+                        border-top: 1px solid $MainLtGrey;
+                        border-bottom: 1px solid $MainLtGrey;
+                        outline: none;
+                        border-left: none;
+                        border-right: none;
+                        background: transparent;
+                    }
+                }
+
+                .BuyBtn {
+                    margin-left: 10px;
+                    height: 45px;
+                    width: 140px;
+                    color: white;
+                    background: $Main2ndBlack;
+                    border: 2px solid $Main2ndBlack;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    transition: all .5s;
+                    -moz-transition: all .5s;
+                    transition-timing-function: ease-in;
+                    -moz-transition-timing-function: ease-in;
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                        background: $Main2ndGreen;
+                        color: $Main2ndBlack;
+                    }
+
+                    @media only screen and (max-width: 991px) {
+                        width: 120px;
+                    }
+                }
+
+                .AddToCart {
+                    margin-left: 10px;
+                    height: 45px;
+                    width: 140px;
+                    color: #222529;
+                    background: $Main2ndGreen;
+                    border: 2px solid $Main2ndGreen;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    transition: all .5s;
+                    -moz-transition: all .5s;
+                    transition-timing-function: ease-in;
+                    -moz-transition-timing-function: ease-in;
+
+                    &:hover {
+                        border-color: $Main2ndBlack;
+                        background: $Main2ndBlack;
+                        color: white;
+                    }
+
+                    @media only screen and (max-width: 991px) {
+                        width: 120px;
+                    }
+                }
+            }
+
+            .DescAndReviews {
+                margin-top: 3em;
+
+                .btns {
+                    display: flex;
+                    border-bottom: 1px solid $MainLtGrey;
+                    margin-bottom: 1em;
+
+                    button {
+                        color: $MainGrey;
+                        background: none;
+                        border: none;
+                        margin-right: 20px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        border-bottom: 2px solid white;
+                        font-size: 14px;
+                    }
+
+                    .active-btn {
+                        color: $Main2ndBlack;
+                        border-bottom: 2px solid $MainBLack;
+                    }
+                }
+
+                .reviews {
+                    .LoginBtn {
+                        border: none;
+                        background: none;
+                        color: $MainGrey;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .Mobile {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+            display: block;
+
+            .ImagesDiv {
+                border: 1px solid $MainLtGrey;
+                padding-bottom: 15px;
+                border-radius: 3px;
+
+                .MainimgDiv {
+                    text-align: center;
+
+                    .Mainimg {
+                        width: 80%;
+                        height: auto;
+                        padding: 20px;
+                    }
+                }
+
+                .swiper-pagination {
+                    height: 10px;
+
+                    .swiper-pagination-bullet {
+                        background: $Main2ndBlack;
+                        opacity: 1;
+                    }
+
+                    .swiper-pagination-bullet-active {
+                        background: $MainGreen;
+                    }
+                }
+            }
+
+            .content {
+                padding-top: 1.5em;
+
+                .TitleShareDiv {
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+
+                    @media only screen and (max-width: 991px) {
+                        grid-template-columns: 85% 12%;
+                    }
+
+                    button {
+                        float: right;
+                        height: 40px;
+                        width: 40px;
+                        border: 1px solid $MainLtGrey;
+                        background: white;
+                        color: $MainBLack;
+                        font-size: large;
+                        border-radius: 50%;
+                        transition: all .5s;
+                        -moz-transition: all .5s;
+                        transition-timing-function: ease-in-out;
+                        -moz-transition-timing-function: ease-in-out;
+
+                        &:hover {
+                            background: $Main2ndGreen;
+                            border-color: $Main2ndGreen;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .variantArea {
+                button {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                    border-radius: 3px;
+                    border: 2px solid $MainBgGray;
+                    background: $MainBgGray;
+                    color: $MainBLack;
+                    font-size: small;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                }
+
+                button[data-type="active"] {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 5px;
+                    border-radius: 3px;
+                    border: 2px solid $MainGreen;
+                    background: $MainBgGray;
+                    color: $MainBLack;
+                    font-size: small;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                }
+            }
+
+            .BuyDiv {
+                margin-top: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: grid;
+                grid-template-columns: 90px auto auto;
+                border-top: 1px solid $MainLtGrey;
+                border-bottom: 1px solid $MainLtGrey;
+
+                .quantityDiv {
+                    display: flex;
+
+                    .btnMinus {
+                        height: 45px;
+                        width: 25px;
+                        border: 1px solid $MainLtGrey;
+                        background: transparent;
+                        border-top-left-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                    }
+
+                    .btnPlus {
+                        height: 45px;
+                        width: 25px;
+                        border: 1px solid $MainLtGrey;
+                        background: transparent;
+                        border-top-right-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+
+                    input {
+                        width: 30px;
+                        height: 45px;
+                        text-align: center;
+                        border-top: 1px solid $MainLtGrey;
+                        border-bottom: 1px solid $MainLtGrey;
+                        outline: none;
+                        border-left: none;
+                        border-right: none;
+                        background: transparent;
+                    }
+                }
+
+                .BuyBtn {
+                    margin-left: 10px;
+                    height: 45px;
+                    width: 90%;
+                    color: white;
+                    background: $Main2ndBlack;
+                    border: 2px solid $Main2ndBlack;
+                    font-weight: bold;
+                    font-size: small;
+                    border-radius: 3px;
+                    transition: all .5s;
+                    -moz-transition: all .5s;
+                    transition-timing-function: ease-in;
+                    -moz-transition-timing-function: ease-in;
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                        background: $Main2ndGreen;
+                        color: $Main2ndBlack;
+                    }
+                }
+
+                .AddToCart {
+                    font-size: small;
+                    margin-left: 10px;
+                    height: 45px;
+                    width: 93%;
+                    color: #222529;
+                    background: $Main2ndGreen;
+                    border: 2px solid $Main2ndGreen;
+                    font-weight: bold;
+                    border-radius: 3px;
+                    transition: all .5s;
+                    -moz-transition: all .5s;
+                    transition-timing-function: ease-in;
+                    -moz-transition-timing-function: ease-in;
+
+                    &:hover {
+                        border-color: $Main2ndBlack;
+                        background: $Main2ndBlack;
+                        color: white;
+                    }
+                }
+            }
+
+            .DescAndReviews {
+                margin-top: 3em;
+
+                .btns {
+                    display: flex;
+                    border-bottom: 1px solid $MainLtGrey;
+                    margin-bottom: 1em;
+
+                    button {
+                        color: $MainGrey;
+                        background: none;
+                        border: none;
+                        margin-right: 20px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        border-bottom: 2px solid white;
+                        font-size: 14px;
+                    }
+
+                    .active-btn {
+                        color: $Main2ndBlack;
+                        border-bottom: 2px solid $MainBLack;
+                    }
+                }
+
+                .reviews {
+                    .LoginBtn {
+                        border: none;
+                        background: none;
+                        color: $MainGrey;
+                    }
+                }
+            }
+        }
+    }
+
+    .relatedproducts {
+        margin-top: 3em;
+
+        .heading {
+            border-bottom: 1px solid $MainLtGrey;
+            margin-bottom: 1.5em;
+
+            h5 {
+                color: $Main2ndBlack;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+
+        .UserMainProCard {
+            width: auto;
+            height: 300px;
+            border-radius: 3px;
+            position: relative;
+
+            .UserMainProimgDiv {
+                height: 170px;
+                text-align: center;
+                padding-top: 10px;
+                border-radius: 3px;
+                width: auto;
+                background: $MainBgGray;
+
+                @media only screen and (max-width: 450px) {
+                    height: 160px;
+                }
+
+                @media only screen and (max-width: 335px) {
+                    height: 140px;
+                }
+
+                img {
+                    width: auto;
+                    height: auto;
+                    max-width: 150px;
+                    max-height: 150px;
+
+                    @media only screen and (max-width: 450px) {
+                        max-width: 130px;
+                        max-height: 130px;
+                    }
+
+                    @media only screen and (max-width: 335px) {
+                        max-width: 110px;
+                        max-height: 110px;
+                    }
+                }
+
+                .offerGreen {
+                    position: absolute;
+                    left: 6%;
+                    top: 6%;
+                    background: $Main2ndGreen;
+                    color: white;
+                    border: none;
+                    font-size: small;
+                    width: 3em;
+                    border-radius: 3px;
+                    cursor: text;
+                }
+            }
+
+            .cartBtn {
+                color: #333;
+                border: 1px solid $MainLtGrey;
+                background: white;
+                position: absolute;
+                right: 10%;
+                top: 10%;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                display: none;
+
+                &:hover {
+                    color: $MainGreen;
+                    border: 1px solid $MainGreen;
+                }
+            }
+
+            .QuickViewDiv {
+                background: $Main2ndGreen;
+                height: 45px;
+                position: absolute;
+                width: 100%;
+                top: 43%;
+                font-size: small;
+                border: none;
+                display: none;
+
+                @media only screen and (max-width: 450px) {
+                    top: 38%;
+                }
+
+                @media only screen and (max-width: 335px) {
+                    top: 32%;
+                }
+            }
+
+            &:hover .cartBtn {
+                display: block;
+            }
+
+            &:hover .QuickViewDiv {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.ProductHead {
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    background: white;
+    z-index: 1000;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 6px 6px -6px;
+
+    @media only screen and (max-width:767px) {
+        display: none;
+    }
+
+    .ProMaiRow {
+        display: grid;
+        grid-template-columns: 6em auto;
+
+        .ProImg {
+            max-height: 4em;
+            max-width: 5em;
+        }
+    }
+
+    .ProBuyRow {
+        float: right;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .quantityDiv {
+            display: flex;
+
+            .btnMinus {
+                height: 45px;
+                width: 30px;
+                border: 1px solid $MainLtGrey;
+                background: transparent;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+            }
+
+            .btnPlus {
+                height: 45px;
+                width: 30px;
+                border: 1px solid $MainLtGrey;
+                background: transparent;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            input {
+                width: 50px;
+                height: 45px;
+                text-align: center;
+                border-top: 1px solid $MainLtGrey;
+                border-bottom: 1px solid $MainLtGrey;
+                outline: none;
+                border-left: none;
+                border-right: none;
+                background: transparent;
+            }
+        }
+
+        .BuyBtn {
+            margin-left: 10px;
+            height: 45px;
+            width: 9em;
+            color: white;
+            background: #222529;
+            border: 2px solid #222529;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            transition-timing-function: ease-in;
+            -moz-transition-timing-function: ease-in;
+
+            &:hover {
+                border-color: $Main2ndGreen;
+                background: $Main2ndGreen;
+                color: #222529;
+            }
+        }
+    }
+}
+
+.ImageModal {
+    display: none;
+
+    @media only screen and (max-width: 767px) {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 11000;
+        height: auto;
+        width: 100%;
+        background: transparent;
+        padding: 2em;
+
+        .ImagesDiv {
+            background: white;
+            height: auto;
+            border-radius: 3px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            text-align: center;
+            padding-bottom: 2em;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .exitDiv {
+                display: block;
+                text-align: right;
+
+                .ExitBtn {
+                    background: none;
+                    border: none;
+                    padding: 5px;
+                    color: #222529;
+                    transition: all .5s;
+                    -moz-transition: all .5s;
+                    -moz-transition-timing-function: linear;
+                    transition-timing-function: linear;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 300px;
+                max-height: 350px;
+            }
+        }
+    }
+}
+
+.ReviewModal {
+    position: fixed;
+    z-index: 10000;
+    background: rgba(191, 191, 191, 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 1%;
+
+    @media only screen and (max-width: 850px) {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    @media only screen and (max-width: 320px) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .Item {
+        width: 100%;
+        height: auto;
+        background: white;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-radius: 5px;
+        padding: 2em;
+        padding-top: 2em;
+        bottom: 10%;
+
+        @media only screen and (max-width: 767px) {
+            padding: 1em;
+            padding-top: 2em;
+        }
+
+        .Main {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+
+            .ExitBtn {
+                text-align: right;
+
+                button {
+                    border: none;
+                    background: none;
+                    color: $MainBLack;
+                }
+            }
+
+            .stars {
+                button {
+                    background: none;
+                    border: none;
+                    color: #ff9800;
+                    padding-right: 5px;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                }
+            }
+
+            .content {
+                input {
+                    width: 100%;
+                    margin-top: 1em;
+                    padding-left: 10px;
+                    height: 35px;
+                    border: 2px solid $MainLtGrey;
+                    outline: none;
+                    font-size: 13px;
+                    color: $MainBLack;
+                }
+
+                textarea {
+                    width: 100%;
+                    margin-top: 1em;
+                    border: 2px solid $MainLtGrey;
+                    padding: 10px;
+                    outline: none;
+                    font-size: 13px;
+                    color: $MainBLack;
+                }
+            }
+
+            .submit {
+                margin-top: 10px;
+                margin-bottom: 1em;
+                width: 7.5em;
+                height: 2.2em;
+                color: white;
+                background: $Main2ndGreen;
+                border: 3px solid $Main2ndGreen;
+                text-transform: uppercase;
+                font-size: 15px;
+                border-radius: 3px;
+                font-weight: bold;
+                transition: all .5s linear;
+                -moz-transition: all .5s linear;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+        }
+    }
+}
+
+#checkPinModal {
+    .ExitBtn {
+        text-align: right;
+    }
+
+    input {
+        height: 35px;
+        border: 2px solid $Main2ndGreen;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        font-size: small;
+        border-radius: 3px;
+        color: $MainBLack;
+        outline: none;
+    }
+
+    button[btn-type="submit"] {
+        height: 2em;
+        width: 6em;
+        float: right;
+        border: 2px solid $MainBLack;
+        color: white;
+        background: $MainBLack;
+        border-radius: 3px;
+        font-size: small;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+
+        &:hover {
+            color: $MainBLack;
+            background: white;
+        }
+    }
+}

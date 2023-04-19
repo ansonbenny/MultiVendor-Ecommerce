@@ -1,0 +1,62 @@
+@import "../../../styles/app.module.scss";
+
+.FooterItems {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    padding-bottom: 25px;
+
+    li {
+        padding-top: 10px;
+
+        a {
+            color: $MainGrey;
+            text-decoration: none;
+            font-size: small;
+
+            &:hover {
+                color: $Main2ndGreen;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.FooterSMicons {
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    list-style: none;
+
+    li {
+        display: inline;
+        padding-right: 10px;
+
+        button {
+            border: 1px solid $MainLtGrey;
+            background: white;
+            color: $MainBLack;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+
+            &:hover {
+                border: 1px solid $Main2ndGreen;
+                background: $Main2ndGreen;
+                color: white;
+            }
+        }
+    }
+
+}
+
+.CopyRightArea {
+    margin-top: 30px;
+    border-top: 1px solid $MainLtGrey;
+    padding-bottom: 20px;
+}

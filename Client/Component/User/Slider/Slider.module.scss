@@ -1,0 +1,77 @@
+@import "../../../styles/app.module.scss";
+
+@keyframes AnimSlidMain {
+    0% {
+        width: 10%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    75% {
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.UserSlider {
+    background: $MainBgGray;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    .SlideMainText {
+        font-size: 50px;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        animation: AnimSlidMain 10s infinite;
+
+        @media only screen and (max-width: 767px) {
+            font-size: x-large;
+        }
+    }
+
+    .SlideSmallText {
+        font-weight: normal;
+        font-size: 20px;
+
+        @media only screen and (max-width: 767px) {
+            font-weight: normal;
+            font-size: small;
+        }
+    }
+
+    .shopNowBtn {
+        height: 45px;
+        width: 8em;
+        color: $MainBLack;
+        border: 1px solid $MainBLack;
+        border-radius: 3px;
+        background: linear-gradient(to right, $MainGreen 50%, $MainBgGray 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s;
+        -moz-transition: all .5s;
+        transition-timing-function: ease-out;
+        -moz-transition-timing-function: ease-out;
+
+        &:hover {
+            background-position: left bottom;
+            border: 1px solid $MainGreen;
+            color: $MainBgGray;
+        }
+    }
+}

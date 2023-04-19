@@ -1,0 +1,42 @@
+@import "../../../styles/app.module.scss";
+
+.CategoriesCompUserMob {
+    .CardMob {
+        height: 155px;
+        border: 1px solid $MainLtGrey;
+
+        @media only screen and (max-width:330px) {
+            height: 135px;
+        }
+
+        .ImgDiv {
+            height: 120px;
+            padding: 10px;
+            text-align: center;
+
+            @media only screen and (max-width:330px) {
+                height: 100px;
+            }
+
+            img {
+                max-height: 110px;
+                max-width: 110px;
+
+                @media only screen and (max-width:330px) {
+                    max-height: 90px;
+                }
+            }
+        }
+
+        .textArea {
+            padding-top: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .ErrorSection {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+}

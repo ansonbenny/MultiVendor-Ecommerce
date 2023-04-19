@@ -1,0 +1,63 @@
+@import '../app.module.scss';
+
+
+.Vendor {
+    .dashboard {
+        .cardDash {
+            border: 1px solid $MainLtGrey;
+            padding: 1em;
+            border-radius: 5px;
+
+            h6 {
+                color: $MainGrey;
+                font-weight: bold;
+            }
+
+            h5 {
+                color: $MainBLack;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+
+        .RecentOrder {
+            overflow-x: auto;
+            border: 1px solid $MainLtGrey;
+            margin-top: 2em;
+            border-radius: 5px;
+
+            h6 {
+                padding: 1em;
+                color: $MainBLack;
+                font-weight: bold;
+            }
+        }
+
+        .MainTable {
+            border-top: 1px solid $MainLtGrey;
+
+            table {
+
+                td {
+                    border-top: 1px solid $MainLtGrey;
+                    border-bottom: none;
+
+                    button[ data-for="actionBtn"] {
+                        background: none;
+                        border: none;
+                        color: #ff5252;
+                        width: auto;
+                        text-transform: uppercase;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+        
+                        &:hover {
+                            color: $Main2ndGreen;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

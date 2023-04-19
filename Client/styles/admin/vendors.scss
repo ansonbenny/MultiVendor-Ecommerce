@@ -1,0 +1,200 @@
+@import '../app.module.scss';
+
+.Admin {
+    .vendorsComp {
+        .MainTable {
+            overflow-x: auto;
+            border: 1px solid $MainLtGrey;
+
+            table {
+
+                td {
+                    border-top: 1px solid $MainLtGrey;
+                    border-bottom: none;
+
+                    .ActionBtn {
+                        text-transform: uppercase;
+                        margin-bottom: 3px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        color: $Main2ndBlack;
+                        border: none;
+                        background: none;
+                        font-weight: bold;
+                        font-size: small;
+                        text-align: left;
+                        width: 6em;
+
+                        &:hover {
+                            color: $MainGreen;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        button[data-for="loadMore"] {
+            width: 7em;
+            height: 2em;
+            margin-top: 10px;
+            color: white;
+            background-color: $Main2ndBlack;
+            border: 3px solid $Main2ndBlack;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                color: $Main2ndBlack;
+                background-color: white;
+            }
+        }
+
+        .BtnsSections {
+            border: 1px solid $MainLtGrey;
+            margin-bottom: 10px;
+            padding: 10px;
+
+            button {
+                text-transform: uppercase;
+                width: 12em;
+                height: 2.5em;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                background: $MainGreen;
+                color: white;
+                border: 3px solid $MainGreen;
+                border-radius: 3px;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+
+                @media only screen and (max-width : 767px) {
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .VendorDetailsComp {
+        border: 1px solid $MainLtGrey;
+        padding: 1em;
+        margin-bottom: 2em;
+
+        label {
+            margin-top: 7px;
+            color: $MainBLack;
+        }
+
+        input {
+            background: white;
+            width: 100%;
+            outline: none;
+            padding-left: 10px;
+            height: 35px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 2px solid $MainGreen;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:focus {
+                border-color: #ff5252;
+            }
+        }
+
+        textarea {
+            background: white;
+            width: 100%;
+            outline: none;
+            padding-left: 10px;
+            padding-top: 15px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 2px solid $MainGreen;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:focus {
+                border-color: #ff5252;
+            }
+        }
+    }
+
+    .VendorProduct {
+        .MainTable {
+            overflow-x: auto;
+            border: 1px solid $MainLtGrey;
+
+            table {
+
+                td {
+                    border-top: 1px solid $MainLtGrey;
+                    border-bottom: none;
+
+                    img {
+                        height: 100px;
+                        max-width: 100px;
+                    }
+
+                    .ActionBtn {
+                        margin-bottom: 3px;
+                        text-transform: uppercase;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        color: $Main2ndBlack;
+                        border: none;
+                        background: none;
+                        font-weight: bold;
+                        font-size: small;
+                        text-align: left;
+                        width: 6em;
+
+                        &:hover {
+                            color: $MainGreen;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .BtnsSections {
+            border: 1px solid $MainLtGrey;
+            margin-bottom: 10px;
+            padding: 10px;
+
+            input {
+                border: 1px solid $MainLtGrey;
+                outline: none;
+                height: 35px;
+                padding-left: 10px;
+                width: 100%;
+            }
+        }
+
+        button[data-for="loadMore"] {
+            width: 7em;
+            height: 2em;
+            margin-top: 10px;
+            color: white;
+            background-color: $Main2ndBlack;
+            border: 3px solid $Main2ndBlack;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                color: $Main2ndBlack;
+                background-color: white;
+            }
+        }
+    }
+}

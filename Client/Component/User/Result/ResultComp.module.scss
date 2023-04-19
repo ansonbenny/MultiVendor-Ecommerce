@@ -1,0 +1,587 @@
+@import "../../../styles/app.module.scss";
+
+.ResultComp {
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    .Desktop {
+        display: block;
+
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+
+        .rowGridDesk {
+            display: block;
+
+            width: 100%;
+            clear: both;
+
+            &:before,
+            &::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+
+            .filterArea {
+                width: 26%;
+                border: 1px solid $MainLtGrey;
+                border-bottom: none;
+                float: left;
+                position: sticky;
+                top: 30px;
+                height: 100%;
+
+                @media only screen and (max-width: 1200px) {
+                    width: 30%;
+                }
+
+                @media only screen and (max-width: 992px) {
+                    width: 35%;
+                }
+
+                .filterItem {
+                    padding: 2em;
+                    border-bottom: 1px solid $MainLtGrey;
+                    height: 8em;
+
+                    .selectBox {
+                        border: 1px solid $MainLtGrey;
+                        width: 100%;
+                        background: transparent;
+                        outline: none;
+                        border-radius: 3px;
+                        font-weight: normal;
+                        color: $MainBLack;
+                    }
+
+                    .RangeContainer {
+                        padding-top: 1em;
+                        display: flex;
+                        padding-bottom: 1em;
+                        position: relative;
+
+                        .slider {
+                            position: relative;
+                            width: 100%;
+
+                            .slider__track,
+                            .slider__range,
+                            .slider__left-value,
+                            .slider__right-value {
+                                position: absolute;
+                            }
+
+                            .slider__track,
+                            .slider__range {
+                                border-radius: 3px;
+                                height: 5px;
+                            }
+
+                            .slider__track {
+                                background-color: $MainGreen;
+                                width: 100%;
+                                z-index: 1;
+                            }
+
+                            .slider__range {
+                                background-color: $MainGreen;
+                                z-index: 2;
+                            }
+
+                            .slider__left-value,
+                            .slider__right-value {
+                                color: $MainGrey;
+                                font-size: 12px;
+                                margin-top: 20px;
+                            }
+
+                            .slider__left-value {
+                                left: 6px;
+                            }
+
+                            .slider__right-value {
+                                right: -4px;
+                            }
+                        }
+
+                        /* Removing the default appearance */
+                        .thumb,
+                        .thumb::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            -webkit-tap-highlight-color: transparent;
+                        }
+
+                        .thumb {
+                            pointer-events: none;
+                            position: absolute;
+                            height: 0;
+                            width: 100%;
+                            outline: none;
+                        }
+
+                        /* For Chrome browsers */
+                        .thumb::-webkit-slider-thumb {
+                            background-color: #f1f5f7;
+                            border: none;
+                            border-radius: 50%;
+                            box-shadow: 0 0 1px 1px #ced4da;
+                            cursor: pointer;
+                            height: 18px;
+                            width: 18px;
+                            margin-top: 4px;
+                            pointer-events: all;
+                            position: relative;
+                        }
+
+                        /* For Firefox browsers */
+                        .thumb::-moz-range-thumb {
+                            background-color: #f1f5f7;
+                            border: none;
+                            border-radius: 50%;
+                            box-shadow: 0 0 1px 1px #ced4da;
+                            cursor: pointer;
+                            height: 18px;
+                            width: 18px;
+                            margin-top: 4px;
+                            pointer-events: all;
+                            position: relative;
+                        }
+
+                    }
+                }
+            }
+
+            .ProductsArea {
+                width: 74%;
+                padding-left: 1em;
+                display: inline-block;
+                vertical-align: top;
+                float: right;
+
+                @media only screen and (max-width: 1200px) {
+                    width: 70%;
+                }
+
+                @media only screen and (max-width: 992px) {
+                    width: 65%;
+                }
+
+                .sortDiv {
+                    padding-bottom: 1em;
+                    display: grid;
+                    grid-template-columns: 10% 25%;
+
+                    @media only screen and (max-width: 991px) {
+                        grid-template-columns: 15% 25%;
+                    }
+
+                    .selectBox {
+                        border: 1px solid $MainLtGrey;
+                        width: auto;
+                        background: transparent;
+                        outline: none;
+                        font-size: small;
+                        color: $MainGrey;
+                        height: 30px;
+                    }
+                }
+
+                .products {
+                    display: grid;
+                    grid-template-columns: 25% 25% 25% 25%;
+
+                    @media only screen and (max-width: 1200px) {
+                        grid-template-columns: 33.333333333% 33.333333333% 33.333333333%;
+                    }
+
+                    @media only screen and (max-width: 991px) {
+                        grid-template-columns: 50% 50%;
+                    }
+
+                    .UserMainProCard {
+                        width: auto;
+                        height: 300px;
+                        border-radius: 3px;
+                        position: relative;
+                        margin: 5px;
+
+                        .textArea {
+                            h6 {
+                                max-width: 200px;
+                            }
+                        }
+
+                        .UserMainProimgDiv {
+                            height: 170px;
+                            text-align: center;
+                            padding-top: 10px;
+                            border-radius: 3px;
+                            width: auto;
+                            background: $MainBgGray;
+
+                            img {
+                                width: auto;
+                                height: auto;
+                                max-width: 150px;
+                                max-height: 150px;
+                            }
+
+                            .offerGreen {
+                                position: absolute;
+                                left: 6%;
+                                top: 6%;
+                                background: $Main2ndGreen;
+                                color: white;
+                                border: none;
+                                font-size: small;
+                                width: 3em;
+                                border-radius: 3px;
+                                cursor: text;
+                            }
+                        }
+
+                        .cartBtn {
+                            color: #333;
+                            border: 1px solid $MainLtGrey;
+                            background: white;
+                            position: absolute;
+                            right: 10%;
+                            top: 10%;
+                            border-radius: 50%;
+                            width: 35px;
+                            height: 35px;
+                            display: none;
+
+                            &:hover {
+                                color: $MainGreen;
+                                border: 1px solid $MainGreen;
+                            }
+                        }
+
+                        .QuickViewDiv {
+                            background: $Main2ndGreen;
+                            height: 45px;
+                            position: absolute;
+                            width: 100%;
+                            top: 43%;
+                            font-size: small;
+                            border: none;
+                            display: none;
+                        }
+
+                        &:hover .cartBtn {
+                            display: block;
+                        }
+
+                        &:hover .QuickViewDiv {
+                            display: block;
+                        }
+                    }
+                }
+
+                .paginationDiv {
+                    margin-top: 1em;
+                    border-top: 1px solid $MainLtGrey;
+                    padding-top: 1em;
+
+                    .pagination {
+                        float: right;
+
+                        button {
+                            margin-left: 5px;
+                            height: 35px;
+                            width: 35px;
+                            border: 1px solid $MainLtGrey;
+                            background: none;
+                            font-weight: bold;
+                            font-size: small;
+                            color: $MainGrey;
+                        }
+
+                        .active {
+                            border: 1px solid $Main2ndGreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Mobile {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+            display: block;
+
+            .ProductsArea {
+
+                .sortDiv {
+                    padding-bottom: 1em;
+                    display: grid;
+                    grid-template-columns: 20% 25%;
+
+                    .selectBox {
+                        border: 1px solid $MainLtGrey;
+                        width: auto;
+                        background: transparent;
+                        outline: none;
+                        font-size: small;
+                        color: $MainGrey;
+                        height: 30px;
+                    }
+                }
+
+                .products {
+
+                    .UserMainProCard {
+                        width: auto;
+                        height: 300px;
+                        border-radius: 3px;
+                        position: relative;
+
+                        .UserMainProimgDiv {
+                            height: 170px;
+                            text-align: center;
+                            padding-top: 10px;
+                            border-radius: 3px;
+                            width: auto;
+                            background: $MainBgGray;
+
+                            @media only screen and (max-width: 450px) {
+                                height: 160px;
+                            }
+
+                            @media only screen and (max-width: 335px) {
+                                height: 140px;
+                            }
+
+                            img {
+                                width: auto;
+                                height: auto;
+                                max-width: 150px;
+                                max-height: 150px;
+
+                                @media only screen and (max-width: 450px) {
+                                    max-width: 130px;
+                                    max-height: 130px;
+                                }
+
+                                @media only screen and (max-width: 335px) {
+                                    max-width: 110px;
+                                    max-height: 110px;
+                                }
+                            }
+
+                            .offerGreen {
+                                position: absolute;
+                                left: 6%;
+                                top: 6%;
+                                background: $Main2ndGreen;
+                                color: white;
+                                border: none;
+                                font-size: small;
+                                width: 3em;
+                                border-radius: 3px;
+                                cursor: text;
+                            }
+                        }
+
+                        .cartBtn {
+                            color: #333;
+                            border: 1px solid $MainLtGrey;
+                            background: white;
+                            position: absolute;
+                            right: 10%;
+                            top: 10%;
+                            border-radius: 50%;
+                            width: 35px;
+                            height: 35px;
+                            display: none;
+
+                            &:hover {
+                                color: $MainGreen;
+                                border: 1px solid $MainGreen;
+                            }
+                        }
+
+                        .QuickViewDiv {
+                            background: $Main2ndGreen;
+                            height: 45px;
+                            position: absolute;
+                            width: 100%;
+                            top: 43%;
+                            font-size: small;
+                            border: none;
+                            display: none;
+
+                            @media only screen and (max-width: 450px) {
+                                top: 38%;
+                            }
+
+                            @media only screen and (max-width: 335px) {
+                                top: 32%;
+                            }
+                        }
+
+                        &:hover .cartBtn {
+                            display: block;
+                        }
+
+                        &:hover .QuickViewDiv {
+                            display: block;
+                        }
+                    }
+                }
+
+                .paginationDiv {
+                    margin-top: 1em;
+                    border-top: 1px solid $MainLtGrey;
+                    padding-top: 1em;
+
+                    .pagination {
+                        float: right;
+
+                        button {
+                            margin-left: 5px;
+                            height: 35px;
+                            width: 35px;
+                            border: 1px solid $MainLtGrey;
+                            background: none;
+                            font-weight: bold;
+                            font-size: small;
+                            color: $MainGrey;
+                        }
+
+                        .active {
+                            border: 1px solid $Main2ndGreen;
+                        }
+                    }
+                }
+
+            }
+
+            .filterArea {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                border-bottom: none;
+                height: 16em;
+
+                .filterItem {
+                    padding: 2em;
+                    border-bottom: 1px solid $MainLtGrey;
+                    height: 8em;
+
+                    .selectBox {
+                        border: 1px solid $MainLtGrey;
+                        width: 100%;
+                        background: transparent;
+                        outline: none;
+                        border-radius: 3px;
+                        font-weight: normal;
+                        color: $MainBLack;
+                    }
+
+                    .RangeContainer {
+                        position: relative;
+                        padding-top: 1em;
+                        display: flex;
+                        padding-bottom: 1em;
+                        align-items: center;
+
+                        .slider {
+                            position: relative;
+                            width: 100%;
+
+                            .slider__track,
+                            .slider__range,
+                            .slider__left-value,
+                            .slider__right-value {
+                                position: absolute;
+                            }
+
+                            .slider__track,
+                            .slider__range {
+                                border-radius: 3px;
+                                height: 5px;
+                            }
+
+                            .slider__track {
+                                background-color: $MainGreen;
+                                width: 100%;
+                                z-index: 1;
+                            }
+
+                            .slider__range {
+                                background-color: $MainGreen;
+                                z-index: 2;
+                            }
+
+                            .slider__left-value,
+                            .slider__right-value {
+                                color: $MainGrey;
+                                font-size: 12px;
+                                margin-top: 20px;
+                            }
+
+                            .slider__left-value {
+                                left: 6px;
+                            }
+
+                            .slider__right-value {
+                                right: -4px;
+                            }
+                        }
+
+                        /* Removing the default appearance */
+                        .thumb,
+                        .thumb::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            -webkit-tap-highlight-color: transparent;
+                        }
+
+                        .thumb {
+                            pointer-events: none;
+                            position: absolute;
+                            height: 0;
+                            width: 100%;
+                            outline: none;
+                        }
+
+                        /* For Chrome browsers */
+                        .thumb::-webkit-slider-thumb {
+                            background-color: #f1f5f7;
+                            border: none;
+                            border-radius: 50%;
+                            box-shadow: 0 0 1px 1px #ced4da;
+                            cursor: pointer;
+                            height: 18px;
+                            width: 18px;
+                            margin-top: 4px;
+                            pointer-events: all;
+                            position: relative;
+                        }
+
+                        /* For Firefox browsers */
+                        .thumb::-moz-range-thumb {
+                            background-color: #f1f5f7;
+                            border: none;
+                            border-radius: 50%;
+                            box-shadow: 0 0 1px 1px #ced4da;
+                            cursor: pointer;
+                            height: 18px;
+                            width: 18px;
+                            margin-top: 4px;
+                            pointer-events: all;
+                            position: relative;
+                        }
+
+                    }
+                }
+            }
+
+
+        }
+    }
+}

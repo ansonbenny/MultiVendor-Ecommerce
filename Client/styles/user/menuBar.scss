@@ -1,0 +1,94 @@
+@import "../app.module.scss";
+
+@keyframes loadingMenuBarMob{
+    0%{
+        opacity: 0.1;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.MenuBar {
+    display: none;
+
+    @media only screen and (max-width: 767px) {
+        display: block;
+        position: fixed;
+        height: 100%;
+        width: 16em;
+        background: white;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        z-index: 10000;
+        overflow-y: auto;
+        animation: loadingMenuBarMob .3s linear;
+        -moz-animation: loadingMenuBarMob .3s linear;
+
+        .loginDiv {
+            background: $MainGreen;
+            height: 50px;
+            padding-left: 1em;
+            padding-top: .7em;
+            display: grid;
+            grid-template-columns: 20% 80%;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .sectionLast {
+            padding-left: 1em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+
+            .ExtraPad{
+                padding-left: .9em;
+            }
+        }
+
+        .sectionOne {
+            padding-left:1em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid $MainLtGrey;
+
+            .ExtraPad{
+                padding-left: 0.9em;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                padding-bottom: .7em;
+
+                .Icons {
+                    width: 40px;
+                }
+
+                a {
+                    color: #333;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}

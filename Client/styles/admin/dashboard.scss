@@ -1,0 +1,63 @@
+@import '../app.module.scss';
+
+.Admin {
+    .dashboard {
+        .cardDash {
+            border: 1px solid $MainLtGrey;
+            padding: 1em;
+
+            h6 {
+                color: $MainGrey;
+                font-weight: bold;
+            }
+
+            h5 {
+                color: $MainBLack;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+
+        .RecentOrder {
+            overflow-x: auto;
+            border: 1px solid $MainLtGrey;
+            margin-top: 2em;
+
+            h6 {
+                padding: 1em;
+                color: $MainBLack;
+                font-weight: bold;
+            }
+        }
+
+        .MainTable {
+            border-top: 1px solid $MainLtGrey;
+
+            table {
+
+                td {
+                    border-top: 1px solid $MainLtGrey;
+                    border-bottom: none;
+
+                    .ActionBtn {
+                        text-transform: uppercase;
+                        margin-bottom: 3px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        color: $Main2ndBlack;
+                        border: none;
+                        background: none;
+                        font-weight: bold;
+                        font-size: small;
+                        text-align: left;
+
+                        &:hover {
+                            color: $MainGreen;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

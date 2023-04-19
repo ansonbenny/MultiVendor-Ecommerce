@@ -1,0 +1,446 @@
+@import '../app.module.scss';
+
+.CheckoutComp {
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    #addressModal {
+        button[data-for="exit"] {
+            outline: none;
+            background: none;
+            border: none;
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        .AddressCard {
+            border: 1px solid $MainLtGrey;
+            padding: 1em;
+            padding-bottom: .7em;
+            margin-bottom: 5px;
+
+            button[data-for="select"] {
+                width: 7em;
+                font-size: small;
+                height: 2em;
+                color: white;
+                border: 2px solid $MainBLack;
+                background: $MainBLack;
+                text-transform: uppercase;
+                border-radius: 3px;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 0em;
+    }
+
+    .wrapper {
+        position: relative;
+        height: auto;
+        width: 100%;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media only screen and (max-width: 767px) {
+            padding-top: 0;
+            padding-bottom: 15px;
+        }
+
+        #option-1 {
+            height: 10px;
+            margin-left: 10px;
+            top: 27px;
+
+            @media only screen and (max-width: 767px) {
+                top: 11.5px;
+            }
+
+            position: absolute;
+            text-align: left;
+            width: 10px;
+        }
+
+        #option-1:checked+.BtnDiv {
+            background: $MainGreen;
+
+            label {
+                color: white;
+            }
+        }
+
+
+        .BtnDiv {
+            cursor: pointer;
+            padding-top: 3px;
+            padding-left: 20px;
+            height: 35px;
+            border: 2px solid $MainGreen;
+            background: white;
+            border-radius: 3px;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            label {
+                font-size: small;
+                color: black;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .desktop {
+        display: block;
+        width: 100%;
+        clear: both;
+
+        &:before,
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .leftDiv {
+            width: 70%;
+            display: inline-block;
+            vertical-align: top;
+            float: left;
+
+            @media only screen and (max-width: 991px) {
+                width: 60%;
+            }
+
+            .FormCard {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                padding: 2em;
+                padding-top: 3em;
+
+                .AddressCard {
+                    button[data-for="more"] {
+                        margin-top: 5px;
+                        width: 7em;
+                        font-size: small;
+                        height: 2em;
+                        color: white;
+                        border: 2px solid $MainGreen;
+                        background: $MainGreen;
+                        text-transform: uppercase;
+                        border-radius: 3px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+
+                        &:hover {
+                            background: white;
+                            color: $MainBLack;
+                        }
+                    }
+
+                    button[data-for="select"] {
+                        width: 7em;
+                        font-size: small;
+                        height: 2em;
+                        color: white;
+                        border: 2px solid $MainBLack;
+                        background: $MainBLack;
+                        text-transform: uppercase;
+                        border-radius: 3px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+
+                        &:hover {
+                            background: white;
+                            color: $MainBLack;
+                        }
+                    }
+                }
+
+                input {
+                    height: 40px;
+                    width: 100%;
+                    padding-left: 10px;
+                    outline: none;
+                    font-size: 15px;
+                    border: 1px solid $MainLtGrey;
+                    color: $MainGrey;
+                }
+
+                textarea {
+                    height: 115px;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    width: 100%;
+                    outline: none;
+                    font-size: 15px;
+                    border: 1px solid $MainLtGrey;
+                    color: $MainGrey;
+                }
+
+                select {
+                    height: 40px;
+                    width: 100%;
+                    padding-left: 10px;
+                    outline: none;
+                    font-size: 15px;
+                    border: 1px solid $MainLtGrey;
+                    background: white;
+                    color: $MainGrey;
+                }
+            }
+
+        }
+
+        .rightDiv {
+            width: 30%;
+            float: right;
+            position: sticky;
+            top: 10px;
+
+            @media only screen and (max-width: 991px) {
+                width: 40%;
+            }
+
+            .CheckoutAmtCard {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                margin-left: 1em;
+                height: auto;
+
+                .cuponInDiv {
+                    position: relative;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-bottom: 1em;
+                    border-bottom: 1px solid $MainLtGrey;
+
+                    input {
+                        width: 100%;
+                        border: 1px solid $MainLtGrey;
+                        outline: none;
+                        height: 35px;
+                        font-size: 15px;
+                        padding-left: 1px;
+                    }
+                }
+
+                .subDiv {
+                    padding-left: 1em;
+                    padding-top: .7em;
+                    padding-bottom: .2em;
+                    border-bottom: 1px solid $MainLtGrey;
+                }
+
+                .lastDiv {
+                    padding-left: 1em;
+                    padding-top: .7em;
+                }
+
+                .AmtDiv {
+                    padding-top: .3em;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    color: $MainBLack;
+                    padding-bottom: .4em;
+                }
+
+                .orderBtnDiv {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+
+                    .orderBtn {
+                        width: 100%;
+                        height: 2.5em;
+                        background: $Main2ndGreen;
+                        border: 3px solid $Main2ndGreen;
+                        border-radius: 3px;
+                        color: white;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        &:hover {
+                            background: white;
+                            color: $MainBLack;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .Mobile {
+
+        .FormCard {
+            margin-top: 1em;
+            border: 1px solid $MainLtGrey;
+            padding: 1em;
+            padding-top: 2em;
+
+            .AddressCard {
+                button[data-for="more"] {
+                    margin-top: 5px;
+                    width: 7em;
+                    font-size: small;
+                    height: 2em;
+                    color: white;
+                    border: 2px solid $MainGreen;
+                    background: $MainGreen;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        background: white;
+                        color: $MainBLack;
+                    }
+                }
+
+                button[data-for="select"] {
+                    width: 7em;
+                    font-size: small;
+                    height: 2em;
+                    color: white;
+                    border: 2px solid $MainBLack;
+                    background: $MainBLack;
+                    text-transform: uppercase;
+                    border-radius: 3px;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        background: white;
+                        color: $MainBLack;
+                    }
+                }
+            }
+
+            input {
+                height: 40px;
+                width: 100%;
+                padding-left: 10px;
+                outline: none;
+                font-size: 15px;
+                border: 1px solid $MainLtGrey;
+                color: $MainGrey;
+            }
+
+            textarea {
+                height: 150px;
+                padding-left: 10px;
+                padding-top: 10px;
+                width: 100%;
+                outline: none;
+                font-size: 15px;
+                border: 1px solid $MainLtGrey;
+                color: $MainGrey;
+            }
+
+            select {
+                height: 40px;
+                width: 100%;
+                padding-left: 10px;
+                outline: none;
+                font-size: 15px;
+                border: 1px solid $MainLtGrey;
+                background: white;
+                color: $MainGrey;
+            }
+        }
+
+        .CheckoutAmtCard {
+            margin-top: 1em;
+            border: 1px solid $MainLtGrey;
+            height: auto;
+
+            .cuponInDiv {
+                position: relative;
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-bottom: 1.5em;
+
+                input {
+                    width: 100%;
+                    border: 2px solid $MainLtGrey;
+                    outline: none;
+                    height: 35px;
+                    font-size: 15px;
+                    padding-left: 1px;
+                }
+            }
+
+            .subDiv {
+                border-bottom: 1px solid $MainLtGrey;
+                padding-left: 1em;
+                padding-top: .7em;
+                padding-bottom: .2em;
+            }
+
+            .AmtDiv {
+                padding-top: .3em;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                color: $MainBLack;
+                padding-bottom: .4em;
+            }
+
+            .lastSub {
+                padding-left: 1em;
+                padding-top: .7em;
+                padding-bottom: .2em;
+            }
+
+        }
+    }
+
+    .CheckoutAmtCardFixed {
+        position: fixed;
+        bottom: 0;
+        background: white;
+        width: 100%;
+        height: 4em;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        .MainDiv {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding-top: 0.5em;
+
+            .orderBtn {
+                width: 100%;
+                height: 89%;
+                background: $Main2ndGreen;
+                border: 3px solid $Main2ndGreen;
+                border-radius: 3px;
+                color: white;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+        }
+    }
+}

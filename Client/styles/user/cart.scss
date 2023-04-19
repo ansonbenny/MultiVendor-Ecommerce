@@ -1,0 +1,452 @@
+@import '../app.module.scss';
+
+.CartComp {
+    padding-top: 2em;
+    padding-bottom: 3em;
+
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 0em;
+    }
+
+    .desktop {
+        display: block;
+        width: 100%;
+        clear: both;
+
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+
+        &:before,
+        &::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .leftDiv {
+            width: 70%;
+            display: inline-block;
+            vertical-align: top;
+            float: left;
+
+            @media only screen and (max-width: 991px) {
+                width: 60%;
+            }
+
+            .cartCard {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                display: grid;
+                grid-template-columns: 170px auto;
+
+                .imgDiv {
+                    width: 170px;
+                    height: 170px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+
+                    img {
+                        max-width: 130px;
+                        max-height: 130px;
+                    }
+                }
+
+                .content {
+                    padding-top: 1em;
+                    padding-bottom: .5em;
+
+                    .RmvNQunty {
+                        display: flex;
+
+                        .quantityDiv {
+                            padding-top: .5em;
+                            display: flex;
+
+                            .btnMinus {
+                                height: 40px;
+                                width: 30px;
+                                border: 1px solid $MainLtGrey;
+                                background: transparent;
+                                border-top-left-radius: 3px;
+                                border-bottom-left-radius: 3px;
+                            }
+
+                            .btnPlus {
+                                height: 40px;
+                                width: 30px;
+                                border: 1px solid $MainLtGrey;
+                                background: transparent;
+                                border-top-right-radius: 3px;
+                                border-bottom-right-radius: 3px;
+                            }
+
+                            input {
+                                width: 50px;
+                                height: 40px;
+                                text-align: center;
+                                border-top: 1px solid $MainLtGrey;
+                                border-bottom: 1px solid $MainLtGrey;
+                                outline: none;
+                                border-left: none;
+                                border-right: none;
+                                background: transparent;
+
+                                @media only screen and (max-width: 991px) {
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+                        .RemoveBtnDiv {
+                            padding-top: .5em;
+                            padding-left: 1em;
+
+                            button {
+                                width: 8em;
+                                height: 2.5em;
+                                background: $Main2ndBlack;
+                                color: white;
+                                border: 3px solid $Main2ndBlack;
+                                border-radius: 3px;
+                                transition: all .5s linear;
+                                -moz-transition: all .5s linear;
+
+                                @media only screen and (max-width: 991px) {
+                                    width: 7em;
+                                }
+
+                                &:hover {
+                                    background: white;
+                                    color: $Main2ndBlack;
+                                }
+                            }
+                        }
+
+                        .StockBtnDiv {
+                            padding-top: .5em;
+
+                            button {
+                                width: 7em;
+                                height: 2.5em;
+                                background: $MainGreen;
+                                color: white;
+                                border: 3px solid $MainGreen;
+                                border-radius: 3px;
+                                transition: all .5s linear;
+                                -moz-transition: all .5s linear;
+
+                                @media only screen and (max-width: 991px) {
+                                    width: 6em;
+                                }
+
+                                &:hover {
+                                    background: white;
+                                    color: $MainGreen;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .rightDiv {
+            width: 30%;
+            float: right;
+            position: sticky;
+            top: 10px;
+
+            @media only screen and (max-width: 991px) {
+                width: 40%;
+            }
+
+            .cartAmtCard {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                margin-left: 1em;
+                height: auto;
+
+                .subDiv {
+                    border-bottom: 1px solid $MainLtGrey;
+                    padding-left: 1em;
+                    padding-top: .7em;
+                    padding-bottom: .2em;
+                }
+
+                .AmtDiv {
+                    padding-top: .3em;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    color: $MainBLack;
+                    padding-bottom: .4em;
+                }
+
+                .orderBtnDiv {
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+
+                    .orderBtn {
+                        width: 100%;
+                        height: 2.5em;
+                        background: $Main2ndGreen;
+                        border: 3px solid $Main2ndGreen;
+                        border-radius: 3px;
+                        color: white;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        &:hover {
+                            background: white;
+                            color: $MainBLack;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .Mobile {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+            display: block;
+
+            .products {
+                .cartCard {
+                    margin-top: 1em;
+                    border: 1px solid $MainLtGrey;
+                    display: grid;
+                    grid-template-columns: 130px auto;
+
+                    @media only screen and (max-width:374px) {
+                        grid-template-columns: 100px auto;
+                    }
+
+                    .imgDiv {
+                        width: 130px;
+                        height: 130px;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+
+                        @media only screen and (max-width:374px) {
+                            width: 100px;
+                        }
+
+                        img {
+                            max-width: 100px;
+                            max-height: 100px;
+
+                            @media only screen and (max-width:374px) {
+                                max-width: 80px;
+                            }
+                        }
+                    }
+
+                    .content {
+                        padding-top: 1em;
+                        padding-bottom: .5em;
+
+                        @media only screen and (max-width:400px) {
+                            h4 {
+                                font-size: 16px;
+                            }
+
+                            h6 {
+                                font-size: small;
+                            }
+                        }
+
+                        .RmvNQunty {
+                            display: flex;
+
+                            .quantityDiv {
+                                padding-top: .5em;
+                                display: flex;
+
+                                .btnMinus {
+                                    height: 40px;
+                                    width: 25px;
+                                    border: 1px solid $MainLtGrey;
+                                    background: transparent;
+                                    border-top-left-radius: 3px;
+                                    border-bottom-left-radius: 3px;
+
+                                    @media only screen and (max-width:374px) {
+                                        width: 20px;
+                                    }
+                                }
+
+                                .btnPlus {
+                                    height: 40px;
+                                    width: 25px;
+                                    border: 1px solid $MainLtGrey;
+                                    background: transparent;
+                                    border-top-right-radius: 3px;
+                                    border-bottom-right-radius: 3px;
+
+                                    @media only screen and (max-width:374px) {
+                                        width: 20px;
+                                    }
+                                }
+
+                                input {
+                                    width: 35px;
+                                    height: 40px;
+                                    text-align: center;
+                                    border-top: 1px solid $MainLtGrey;
+                                    border-bottom: 1px solid $MainLtGrey;
+                                    outline: none;
+                                    border-left: none;
+                                    border-right: none;
+                                    background: transparent;
+
+                                    @media only screen and (max-width:374px) {
+                                        width: 25px;
+                                    }
+                                }
+                            }
+
+                            .StockBtnDiv {
+                                padding-top: .5em;
+
+                                @media only screen and (max-width:374px) {
+                                    padding-left: .5em;
+                                }
+
+                                button {
+                                    width: 5em;
+                                    height: 2.5em;
+                                    background: $MainGreen;
+                                    color: white;
+                                    border: 3px solid $MainGreen;
+                                    border-radius: 3px;
+                                    transition: all .5s linear;
+                                    -moz-transition: all .5s linear;
+
+                                    @media only screen and (max-width:374px) {
+                                        width: 4em;
+                                        font-size: small;
+                                        height: 3em;
+                                    }
+
+                                    &:hover {
+                                        background: white;
+                                        color: $Main2ndBlack;
+                                    }
+                                }
+                            }
+
+                            .RemoveBtnDiv {
+                                padding-top: .5em;
+                                padding-left: 1em;
+
+                                @media only screen and (max-width:374px) {
+                                    padding-left: .5em;
+                                }
+
+                                button {
+                                    width: 6em;
+                                    height: 2.5em;
+                                    background: $Main2ndBlack;
+                                    color: white;
+                                    border: 3px solid $Main2ndBlack;
+                                    border-radius: 3px;
+                                    transition: all .5s linear;
+                                    -moz-transition: all .5s linear;
+
+                                    @media only screen and (max-width:374px) {
+                                        width: 5em;
+                                        font-size: small;
+                                        height: 3em;
+                                    }
+
+                                    &:hover {
+                                        background: white;
+                                        color: $Main2ndBlack;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .cartAmtCard {
+                margin-top: 1em;
+                border: 1px solid $MainLtGrey;
+                height: auto;
+
+                .subDiv {
+                    border-bottom: 1px solid $MainLtGrey;
+                    padding-left: 1em;
+                    padding-top: .7em;
+                    padding-bottom: .2em;
+                }
+
+                .AmtDiv {
+                    padding-top: .3em;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    color: $MainBLack;
+                    padding-bottom: .4em;
+                }
+
+                .lastSub {
+                    padding-left: 1em;
+                    padding-top: .7em;
+                    padding-bottom: .2em;
+                }
+
+            }
+        }
+    }
+
+    .amtCardFixed {
+        display: none;
+
+        @media only screen and (max-width: 767px) {
+            position: fixed;
+            bottom: 0;
+            background: white;
+            width: 100%;
+            height: 4em;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            .MainDiv {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                padding-top: 0.5em;
+
+                .orderBtn {
+                    width: 100%;
+                    height: 89%;
+                    background: $Main2ndGreen;
+                    border: 3px solid $Main2ndGreen;
+                    border-radius: 3px;
+                    color: white;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                    text-transform: uppercase;
+                    font-weight: bold;
+
+                    &:hover {
+                        background: white;
+                        color: $MainBLack;
+                    }
+                }
+            }
+        }
+    }
+}

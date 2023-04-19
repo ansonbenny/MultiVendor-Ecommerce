@@ -1,0 +1,58 @@
+@import '../app.module.scss';
+
+.Admin {
+    font-size: 15px;
+
+    .AdminContainer {
+        margin-left: 2em;
+        margin-right: 2em;
+
+        @media only screen and (max-width: 767px) {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+
+    .MenuBarAdmin {
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 1em;
+        ;
+        font-size: small;
+        margin-bottom: 1.5em;
+
+        @media only screen and (max-width: 767px) {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .navbar {
+            background: $AdminMainColor;
+            border-radius: 5px;
+
+            a {
+                color: white;
+            }
+
+            .nav-link {
+                text-transform: uppercase;
+                font-size: small;
+                font-weight: bold;
+            }
+
+            .navbar-toggler {
+                color: white;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .navbar-toggler:focus,
+            .navbar-toggler:active,
+            .navbar-toggler-icon:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

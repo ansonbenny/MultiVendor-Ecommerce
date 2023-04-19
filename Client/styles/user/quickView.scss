@@ -1,0 +1,210 @@
+@import '../app.module.scss';
+
+@keyframes loadingQuickView {
+    0% {
+        height: 10%;
+    }
+
+    50% {
+        height: 50%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+.QuickView {
+    top: 0;
+    position: fixed;
+    z-index: 10000;
+    background: rgba(191, 191, 191, 0.2);
+    width: 100%;
+    height: 100%;
+    padding-left: 7em;
+    padding-right: 7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    animation: loadingQuickView .5s linear;
+    -moz-animation: loadingQuickView .5s linear;
+
+    .Item {
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-radius: 5px;
+        padding: 1em;
+        padding-top: 2em;
+
+        .ExitBtn {
+            color: $MainBLack;
+            background: none;
+            border: none;
+            float: right;
+            margin-top: -20px;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: red;
+            }
+        }
+
+        .Main {
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+
+            .Product {
+                display: block;
+                width: 100%;
+                clear: both;
+
+                &:before,
+                &::after {
+                    content: '';
+                    display: table;
+                    clear: both;
+                }
+
+                .leftDiv {
+                    width: 50%;
+                    float: left;
+                    position: sticky;
+                    top: 30px;
+                    height: 100%;
+
+                    @media only screen and (max-width: 767px) {
+                        width: 100%;
+                        float: none;
+                        position: relative;
+                        top: auto;
+                    }
+                }
+
+                .rightDiv {
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                    float: right;
+                    padding-bottom: 1em;
+
+                    @media only screen and (max-width: 767px) {
+                        width: 100%;
+                        display: block;
+                        vertical-align: auto;
+                        float: none;
+                    }
+                }
+
+            }
+
+            .ShowMoreBtn {
+                height: 3em;
+                width: 9em;
+                margin-top: 20px;
+                text-align: center;
+                border: 3px solid $MainGreen;
+                border-radius: 5px;
+                background: $MainGreen;
+                font-weight: bold;
+                color: white;
+                transition: all .5s;
+                -moz-transition: all .5s;
+                transition-timing-function: ease-in-out;
+                -moz-transition-timing-function: ease-in-out;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+
+            .QuickMainImgDiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .QuickMainImgs {
+                    transition: all 1s;
+                    -moz-transition: all 1s;
+                    transition-timing-function: ease-in-out;
+                    -moz-transition-timing-function: ease-in-out;
+                    max-width: 300px;
+                    max-height: 300px;
+                    padding-bottom: 2.5em;
+                    width: auto;
+
+                    @media only screen and (max-width: 1021px) {
+                        max-width: 100%;
+                        max-height: auto;
+                        padding-bottom: 0;
+                        padding: 1.5em;
+                    }
+                }
+            }
+
+            .QuickContainer {
+                margin-left: 1em;
+                margin-right: 1em;
+                padding-bottom: 2em;
+
+                @media only screen and (max-width: 1192px) {
+                    margin: 0;
+                }
+            }
+
+            .QuickImgThumbDiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .QuickImgThumb {
+                    transition: all 1s;
+                    -moz-transition: all 1s;
+                    transition-timing-function: ease-in-out;
+                    -moz-transition-timing-function: ease-in-out;
+                    width: 90px;
+                    height: 90px;
+                    padding: 5px;
+                    border: 1px solid $MainLtGrey;
+
+                    @media only screen and (max-width: 1105px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    @media only screen and (max-width: 1010px) {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                }
+            }
+
+            .swiper-slide-thumb-active {
+                .QuickImgThumb {
+                    transition: all 1s;
+                    -moz-transition: all 1s;
+                    transition-timing-function: ease-in-out;
+                    -moz-transition-timing-function: ease-in-out;
+                    border: 1px solid $MainBLack;
+                }
+            }
+        }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+}

@@ -1,0 +1,179 @@
+// User
+
+@import './user/product.scss';
+@import './user/quickView.scss';
+@import './user/login.scss';
+@import './user/wishlist.scss';
+@import './user/cart.scss';
+@import './user/checkout.scss';
+@import './user/account.scss';
+@import './user/address.scss';
+@import './user/orders.scss';
+@import './user/orderDetails.scss';
+@import './user/menuBar.scss';
+
+// Vendor
+
+@import './vendor/headerVendor.scss';
+@import './vendor/login.scss';
+@import './vendor/register.scss';
+@import './vendor/settings.scss';
+@import './vendor/products.scss';
+@import './vendor/orders.scss';
+@import './vendor/dashboard.scss';
+
+// Admin
+
+@import './admin/headerAdmin.scss';
+@import './admin/vendors.scss';
+@import './admin/product.scss';
+@import './admin/orders.scss';
+@import './admin/cupons.scss';
+@import './admin/categories.scss';
+@import './admin/layouts.scss';
+@import './admin/dashboard.scss';
+@import './admin/login.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.color-white {
+    color: white;
+}
+
+.UserGreenMain {
+    color: $MainGreen;
+}
+
+.UserBlackMain {
+    color: $MainBLack;
+}
+
+.UserBlackMain2nd {
+    color: $Main2ndBlack;
+}
+
+.UserMainBgGrey {
+    background: $MainBgGray;
+}
+
+.UserGrayMain {
+    color: $MainGrey;
+}
+
+.ResponsiveImg {
+    width: 100%;
+    height: auto;
+}
+
+.GridTwoAuto {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.text-small {
+    font-size: small;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.font-bolder {
+    font-weight: bolder;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.LinkTagNonDec {
+    text-decoration: none;
+}
+
+.grayLtBorder {
+    border: 1px solid $MainLtGrey;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.oneLineTxt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jodit-status-bar__item-right {
+    a {
+        display: none;
+    }
+}
+
+.textSpace {
+    line-height: 1.3;
+}
+
+.oneLineTxtMax-300 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+.oneLineTxt-Desk-Specific {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 330px;
+
+    @media only screen and (max-width:992px) {
+        max-width: 230px;
+    }
+}
+
+.oneLineTxt-Mob {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+
+    @media only screen and (max-width:500px) {
+        max-width: 250px;
+    }
+
+    @media only screen and (max-width:430px) {
+        max-width: 220px;
+    }
+
+    @media only screen and (max-width:400px) {
+        max-width: 180px;
+    }
+
+    @media only screen and (max-width:335px) {
+        max-width: 150px;
+    }
+
+}
+
+.containerVendor {
+    margin-left: 2em;
+    margin-right: 2em;
+
+    @media only screen and (max-width: 767px) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}

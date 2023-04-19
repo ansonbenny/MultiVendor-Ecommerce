@@ -1,0 +1,324 @@
+@import '../app.module.scss';
+
+.Admin {
+    .ProductListAdmin {
+        .searchDiv {
+            margin-top: 1em;
+
+            input {
+                border: none;
+                outline: none;
+                width: 60%;
+            }
+        }
+
+        .TitleGrid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+
+            .AddBtn {
+                background: $Main2ndGreen;
+                text-transform: uppercase;
+                float: right;
+                height: 2.5em;
+                width: 9em;
+                border: 3px solid $Main2ndGreen;
+                color: white;
+                border-radius: 3px;
+                font-weight: bold;
+                transition: all .5s linear;
+                -moz-transition: all .5s linear;
+
+                &:hover {
+                    background: $MainGreen;
+                    border-color: $MainGreen;
+                }
+            }
+        }
+
+        .Products {
+            margin-top: 2em;
+            margin-bottom: 3em;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+
+            @media only screen and (max-width: 969px) {
+                grid-template-columns: 50% 50%;
+            }
+
+            @media only screen and (max-width: 487px) {
+                grid-template-columns: 100%;
+            }
+
+            .productCard {
+                margin: 0.5em;
+
+                @media only screen and (max-width: 487px) {
+                    margin: 0;
+                    margin-top: 0.5em;
+                }
+
+                .innerCard {
+                    border: 2px solid $MainBgGray;
+                    border-radius: 3px;
+                    text-align: center;
+                    width: 100%;
+                    padding-top: 5px;
+                    position: relative;
+
+                    .ImgDiv {
+                        width: 200px;
+                        height: 200px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            margin: auto;
+                            display: block;
+                            max-width: 200px;
+                            max-height: 200px;
+                        }
+                    }
+
+                    .CardMenu {
+                        position: absolute;
+                        top: 40%;
+                        width: 100%;
+                        display: none;
+
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            margin: 3px;
+                            border-radius: 3px;
+                            color: white;
+                            transition: all .5s ease-in;
+                            -moz-transition: all .5s ease-in;
+                        }
+
+                        .Delete {
+                            background: #ff5252;
+                            border: 3px solid #ff5252;
+                        }
+
+                        .View {
+                            background: $MainGreen;
+                            border: 3px solid $MainGreen;
+                        }
+
+                        .Edit {
+                            background: #2dcee3;
+                            border: 3px solid #2dcee3;
+                        }
+                    }
+
+                    &:hover .CardMenu {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .AdminProListPaginationArea {
+        border-top: 1px solid $MainLtGrey;
+        padding-top: 1em;
+        padding-bottom: 2em;
+
+        button {
+            width: 35px;
+            height: 35p;
+            border: 3px solid $MainGreen;
+            background: white;
+            color: $MainBLack;
+            margin-right: 5px;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                border-color: $Main2ndGreen;
+            }
+        }
+
+        .active {
+            background: $MainGreen;
+            color: white;
+
+            &:hover {
+                border-color: $MainGreen;
+            }
+        }
+    }
+
+    .AddProduct {
+        border: 1px solid $MainLtGrey;
+        padding: 1em;
+        margin-bottom: 2em;
+
+        .innerDiv {
+            padding-top: 2em;
+            height: 100%;
+            width: 100%;
+
+            @media only screen and (max-width: 767px) {
+                padding: 1em;
+            }
+
+            .ExitDiv {
+                text-align: right;
+
+                button {
+                    width: 4em;
+                    height: 2em;
+                    background: #2dcee3;
+                    border: none;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+                    border-radius: 3px;
+                    color: white;
+                    font-weight: bold;
+
+                    &:hover {
+                        background: #ff5252;
+                    }
+                }
+            }
+
+            .jodit-container:not(.jodit_inline) {
+                border: 2px solid $MainGreen;
+                border-radius: 0;
+            }
+
+            input {
+                background: white;
+                width: 100%;
+                outline: none;
+                padding-left: 10px;
+                height: 35px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 2px solid $MainGreen;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:focus {
+                    border-color: #ff5252;
+                }
+            }
+
+            textarea {
+                background: white;
+                width: 100%;
+                outline: none;
+                padding-left: 10px;
+                padding-top: 15px;
+                height: 100px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 2px solid $MainGreen;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:focus {
+                    border-color: #ff5252;
+                }
+            }
+
+            select {
+                background: white;
+                width: 100%;
+                outline: none;
+                padding-left: 10px;
+                height: 35px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 2px solid $MainGreen;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:focus {
+                    border-color: #ff5252;
+                }
+            }
+
+            button[data-for="variantAdd"]{
+                margin-top: 5px;
+                width: 7.5em;
+                height: 2em;
+                margin-bottom: 10px;
+                color: white;
+                text-transform: uppercase;
+                font-size: small;
+                border: 2px solid $MainBLack;
+                background: $MainBLack;
+                border-radius: 3px;
+            }
+
+            .variantBox{
+                border: 1px solid $MainLtGrey;
+                padding: 1em;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                button {
+                    height: 35px;
+                    width: 35px;
+                    margin-top: 9px;
+                    background: #ff5252;
+                    border: 2px solid #ff5252;
+                    color: white;
+                }
+            }
+
+            .submitBnt {
+                background: $MainGreen;
+                margin-top: 20px;
+                margin-bottom: 2em;
+                height: 2.5em;
+                width: 10em;
+                border: 3px solid $MainGreen;
+                border-radius: 3px;
+                color: white;
+                font-weight: bold;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+
+            .thumnail {
+                width: 100%;
+                height: auto;
+                border: 2px solid #ff5252;
+                padding: 5px;
+            }
+
+            .imagesProductDiv {
+                text-align: center;
+                width: 100%;
+                height: 210px;
+                border: 2px solid #ff5252;
+                margin-bottom: 10px;
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    margin: auto;
+                    display: block;
+                    max-width: 200px;
+                    max-height: 200px;
+
+                    @media only screen and (max-width: 767px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+@import '../app.module.scss';
+
+.Vendor {
+    .OrdersComp {
+        background: white;
+
+        .Head {
+            border: 1px solid $MainLtGrey;
+            display: grid;
+            grid-template-columns: 30%;
+            padding: 1em;
+            border-radius: 5px;
+
+            @media only screen and (max-width: 767px) {
+                grid-template-columns: 50%;
+            }
+
+            input[data-for="search"] {
+                width: 100%;
+                padding-left: 10px;
+                height: 35px;
+                border: 2px solid $MainGreen;
+                border-radius: 5px;
+                outline: none;
+                font-size: small;
+                color: $MainBLack;
+            }
+
+            button[data-for="addProduct"] {
+                float: right;
+                height: 35px;
+                font-size: small;
+                color: white;
+                border: 2px solid $MainGreen;
+                background: $MainGreen;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    background: white;
+                    color: $MainBLack;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    padding: 0;
+                    width: 90%;
+                }
+            }
+        }
+
+        .tableDiv {
+            border: 1px solid $MainLtGrey;
+            overflow-x: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            border-radius: 5px;
+
+            button[ data-for="actionBtn"] {
+                background: none;
+                border: none;
+                color: #ff5252;
+                width: auto;
+                text-transform: uppercase;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    color: $Main2ndGreen;
+                }
+            }
+        }
+
+        button[data-for="loadMore"] {
+            width: 7em;
+            height: 2em;
+            color: white;
+            background-color: $Main2ndBlack;
+            border: 3px solid $Main2ndBlack;
+            border-radius: 3px;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                color: $Main2ndBlack;
+                background-color: white;
+            }
+        }
+    }
+
+    .OrderDetails {
+
+        .ProductBtnDiv {
+            text-align: right;
+
+            button[data-for="showproduct"] {
+                width: auto;
+                padding-left: 1em;
+                padding-right: 1em;
+                height: 2em;
+                color: white;
+                background-color: $Main2ndBlack;
+                border: 3px solid $Main2ndBlack;
+                border-radius: 3px;
+                text-transform: uppercase;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    color: $Main2ndBlack;
+                    background-color: white;
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+            padding-left: 10px;
+            height: 35px;
+            border: 1px solid $MainLtGrey;
+            border-radius: 3px;
+            outline: none;
+            font-size: small;
+            color: $MainBLack;
+            background: white;
+        }
+
+        label {
+            color: $MainBLack;
+            font-size: small;
+            margin-top: 7px;
+        }
+
+        textarea {
+            width: 100%;
+            padding-left: 10px;
+            padding-top: 10px;
+            border: 1px solid $MainLtGrey;
+            border-radius: 3px;
+            outline: none;
+            font-size: small;
+            color: $MainBLack;
+            background: white;
+        }
+    }
+}

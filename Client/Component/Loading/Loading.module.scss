@@ -1,0 +1,35 @@
+@import '../../styles/app.module.scss';
+
+@keyframes spinning {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loadingScreen {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background: $MainGreen;
+
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        .spineer{
+            width: 55px;
+            height: 55px;
+            background: white;
+            border: 3px solid white;
+            animation: spinning 5s infinite;
+        }
+    }
+}

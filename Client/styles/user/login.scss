@@ -1,0 +1,251 @@
+@import "../../styles/app.module.scss";
+
+.Login {
+    position: fixed;
+    z-index: 10000;
+    background: rgba(191, 191, 191, 0.2);
+    width: 100%;
+    height: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 1%;
+
+    @media only screen and (max-width: 850px) {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    @media only screen and (max-width: 320px) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .Item {
+        width: 100%;
+        height: auto;
+        background: white;
+        border-radius: 5px;
+        padding: 2em;
+        padding-top: 2em;
+        bottom: 10%;
+
+        @media only screen and (max-width: 767px) {
+            padding: 1em;
+            padding-top: 2em;
+        }
+
+        .Main {
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%;
+            height: auto;
+
+            #Login {
+                input {
+                    height: 35px;
+                    width: 100%;
+                    border: 2px solid $MainGreen;
+                    outline: none;
+                    padding-left: 10px;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                    }
+                }
+
+                label {
+                    color: $MainBLack;
+                }
+
+                .forgotBtn {
+                    background: none;
+                    border: none;
+                    color: #0096FF;
+                    padding-top: 10px;
+                    font-size: 15px;
+                }
+
+                .loginBtn {
+                    width: 100%;
+                    height: 35px;
+                    background: $MainGreen;
+                    color: white;
+                    border: 3px solid $MainGreen;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        background: none;
+                        color: $MainBLack;
+                    }
+                }
+
+                .passwdDiv {
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                    border: 2px solid $MainGreen;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    @media only screen and (max-width: 767px) {
+                        grid-template-columns: 85% 15%;
+                    }
+
+                    .passInput {
+                        border: none;
+                        height: 33px;
+                    }
+
+                    .showHide {
+                        background: none;
+                        border: none;
+                        border-left: 2px solid $MainGreen;
+                        height: 33px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                    }
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                    }
+
+                    &:hover .showHide {
+                        border-color: $Main2ndGreen;
+                    }
+                }
+
+                .notMember {
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    color: $MainBLack;
+                    padding-top: 25px;
+                    font-size: 15px;
+                    text-align: center;
+                    cursor: text;
+
+                    span {
+                        cursor: pointer;
+                        color: #0096FF;
+                    }
+                }
+
+                .resent {
+                    padding-top: 5px;
+                    color: #0096FF;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+            }
+
+            #SignUp {
+                input {
+                    height: 35px;
+                    width: 100%;
+                    border: 2px solid $MainGreen;
+                    outline: none;
+                    padding-left: 10px;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                    }
+                }
+
+                label {
+                    color: $MainBLack;
+                }
+
+                .loginBtn {
+                    width: 100%;
+                    height: 35px;
+                    background: $MainGreen;
+                    color: white;
+                    border: 3px solid $MainGreen;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    &:hover {
+                        background: none;
+                        color: $MainBLack;
+                    }
+                }
+
+                .Member {
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    color: $MainBLack;
+                    padding-top: 25px;
+                    font-size: 15px;
+                    text-align: center;
+                    cursor: text;
+
+                    span {
+                        color: #0096FF;
+                        cursor: pointer;
+                    }
+                }
+
+                .resent {
+                    padding-top: 5px;
+                    color: #0096FF;
+                    cursor: pointer;
+                    font-size: 15px;
+                }
+
+                .passwdDiv {
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                    border: 2px solid $MainGreen;
+                    transition: all .5s ease-in-out;
+                    -moz-transition: all .5s ease-in-out;
+
+                    @media only screen and (max-width: 767px) {
+                        grid-template-columns: 85% 15%;
+                    }
+
+                    .passInput {
+                        border: none;
+                        height: 33px;
+                    }
+
+                    .showHide {
+                        background: none;
+                        border: none;
+                        border-left: 2px solid $MainGreen;
+                        height: 33px;
+                        transition: all .5s ease-in-out;
+                        -moz-transition: all .5s ease-in-out;
+                    }
+
+                    &:hover {
+                        border-color: $Main2ndGreen;
+                    }
+
+                    &:hover .showHide {
+                        border-color: $Main2ndGreen;
+                    }
+                }
+            }
+        }
+    }
+}

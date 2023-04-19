@@ -1,0 +1,168 @@
+.AddressComp {
+    background: $MainBgGray;
+
+    .MobNon {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .MainCard {
+        padding: 3em;
+        background: white;
+        border-radius: 3px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+        button[data-for="addAddress"] {
+            background: $MainBLack;
+            color: white;
+            border: 2px solid $MainBLack;
+            text-transform: uppercase;
+            font-size: small;
+            height: 2.2em;
+            width: 10em;
+            border-radius: 3px;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            margin-bottom: 1.5em;
+            text-align: center;
+
+            &:hover {
+                background: white;
+                color: $MainBLack;
+            }
+        }
+
+        .SubTitle {
+            border-bottom: 2px solid $MainLtGrey;
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 1.5em;
+        }
+
+        .AddressCard {
+            border: 1px solid $MainLtGrey;
+            border-radius: 3px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .Menu {
+        @media only screen and (max-width: 767px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .BtnDiv {
+            margin-bottom: 1em;
+
+            @media only screen and (max-width:767px) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            button {
+                padding-left: 1em;
+                width: 85%;
+                height: 35px;
+                border-radius: 3px;
+                font-size: small;
+                font-weight: bold;
+                color: $MainBLack;
+                border: 2px solid #22cc9d;
+                text-align: left;
+                background: transparent;
+
+                .span2 {
+                    padding-top: 3px;
+                    padding-left: 1em;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 0;
+
+                    span {
+                        float: left;
+                        width: 2.5em;
+                        padding-left: 1em;
+                    }
+
+                    .span2 {
+                        float: none;
+                        width: auto;
+                    }
+                }
+            }
+
+            .active {
+                color: white;
+                background: #22cc9d;
+            }
+        }
+    }
+
+    #addressModal {
+        input {
+            width: 100%;
+            border: 1px solid $MainLtGrey;
+            padding-left: 10px;
+            height: 30px;
+            font-size: small;
+            color: $MainBLack;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid $MainLtGrey;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-right: 10px;
+            font-size: small;
+            color: $MainBLack;
+            outline: none;
+        }
+
+        select {
+            width: 100%;
+            border: 1px solid $MainLtGrey;
+            padding-left: 10px;
+            height: 30px;
+            font-size: small;
+            background: white;
+            color: $MainBLack;
+            outline: none;
+        }
+
+        button[data-for="exit"] {
+            outline: none;
+            background: none;
+            border: none;
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        button[type='submit'] {
+            font-size: small;
+            width: 7em;
+            background: $MainBLack;
+            border: 2px solid $MainBLack;
+            color: white;
+            border-radius: 3px;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                color: $MainBLack;
+                background: white;
+            }
+        }
+    }
+}

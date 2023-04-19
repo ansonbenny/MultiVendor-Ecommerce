@@ -1,0 +1,187 @@
+@import "../../../styles/app.module.scss";
+
+.UserHeadDesk {
+    background: #ffff;
+    display: block;
+
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+
+    .subTop {
+        background: $MainBgGray;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .main {
+        border-bottom: 1px solid $MainLtGrey;
+        padding-top: 25px;
+        padding-bottom: 20px;
+
+        .searchBox {
+            border: 2px solid $MainGreen;
+            outline: none;
+            border-radius: 5px;
+            width: 85%;
+            height: 45px;
+            padding-left: 10px;
+        }
+
+        .searchBtn {
+            color: white;
+            background-color: $MainGreen;
+            border: 2px solid $MainGreen;
+            margin-left: -5px;
+            height: 45px;
+            width: 45px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .accNameMax {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100px;
+        }
+
+    }
+
+    .sub {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                padding-right: 1em;
+
+                .mainLink {
+                    text-decoration: none;
+                    color: $MainBLack;
+                    font-weight: normal;
+                    font-size: 16px;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $Main2ndGreen;
+                    }
+                }
+
+                h6 {
+                    color: $MainBLack;
+                    font-weight: normal;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: $Main2ndGreen;
+                        cursor: pointer;
+                    }
+                }
+
+                .showCategories {
+                    display: none;
+                }
+
+                &:hover {
+                    .showCategories {
+                        display: block;
+                        z-index: 10000;
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                        min-height: 200px;
+                        background: white;
+                        padding-top: .5em;
+                        left: 0;
+                        right: 0;
+                        box-shadow: rgba(99, 99, 99, 0.2) 0px 6px 8px -8px;
+
+                        @media only screen and (max-width:767px) {
+                            display: none;
+                        }
+
+                        .innerDiv {
+                            border-top: 1px solid $MainLtGrey;
+                            padding-top: 1em;
+                            padding-bottom: 1em;
+
+                            .innerLinks {
+                                font-size: 13px;
+                                text-decoration: none;
+                                color: $Main2ndBlack;
+
+                                &:hover {
+                                    color: $Main2ndGreen;
+                                }
+                            }
+
+                            .innerLinksTwo {
+                                font-size: 13px;
+                                text-decoration: none;
+                                color: $MainGrey;
+
+                                &:hover {
+                                    color: $Main2ndGreen;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.UserHeadMob {
+    display: none;
+
+    @media only screen and (max-width: 767px) {
+        display: block;
+        width: 100%;
+
+        .subTop {
+            background: $MainBgGray;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        .MainMob {
+            .MobMenuBar {
+                background: none;
+                border: none;
+            }
+        }
+
+        .subBottumMob {
+            padding-bottom: 15px;
+
+            .searchBox {
+                border: 2px solid $MainGreen;
+                outline: none;
+                border-radius: 5px;
+                width: 83%;
+                height: 45px;
+                padding-left: 10px;
+            }
+
+            .searchBtn {
+                color: white;
+                background-color: $MainGreen;
+                border: 2px solid $MainGreen;
+                margin-left: -5px;
+                padding-top: 1px;
+                height: 45px;
+                width: 45px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}

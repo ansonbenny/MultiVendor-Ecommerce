@@ -1,0 +1,22 @@
+.ErrorComp {
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    .ErrorCode {
+        font-size: 130px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        transition: all 1s;
+        -moz-transition: all 1s;
+        transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 100px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 70px;
+        }
+    }
+}

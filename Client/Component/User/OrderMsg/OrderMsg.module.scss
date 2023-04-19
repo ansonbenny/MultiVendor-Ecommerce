@@ -1,0 +1,66 @@
+@import '../../../styles/app.module.scss';
+
+.OrderSuccess{
+    text-align: center;
+    .RoundBorder{
+        border: 1px solid $MainLtGrey;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    h5{
+        font-weight: bold;
+        color: $MainGreen;
+        text-transform: uppercase;
+        font-size: 35px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: small;
+        color: $Main2ndGreen;
+        &:hover{
+            color: $Main2ndGreen;
+        }
+    }
+}
+
+.OrderFailed{
+    text-align: center;
+    .RoundBorder{
+        border: 1px solid $MainLtGrey;
+        width: 170px;
+        height: 170px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        padding-top: 10px;
+    }
+
+    h5{
+        font-weight: bold;
+        color: red;
+        text-transform: uppercase;
+        font-size: 35px;
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: small;
+        color: $Main2ndGreen;
+        &:hover{
+            color: $Main2ndGreen;
+        }
+    }
+}

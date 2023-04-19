@@ -1,0 +1,192 @@
+@import '../app.module.scss';
+
+.OrdersComp {
+    background: $MainBgGray;
+
+    .MobNon {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .MainCard {
+        padding: 3em;
+        background: white;
+        border-radius: 3px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+        @media only screen and (max-width: 767px) {
+            padding: 1.5em;
+        }
+
+        .searchIn {
+            width: 50%;
+            outline: none;
+            margin-bottom: 1em;
+            height: 35px;
+            border: 2px solid $MainGreen;
+            padding-left: 10px;
+            font-size: 15px;
+            border-radius: 3px;
+
+            @media only screen and (max-width: 450px) {
+                width: 100%;
+            }
+        }
+
+        .orderCard {
+            border: 1px solid $MainLtGrey;
+            border-radius: 3px;
+            display: grid;
+            grid-template-columns: 140px auto;
+
+            @media only screen and (max-width: 500px) {
+                grid-template-columns: 120px auto;
+            }
+
+            @media only screen and (max-width: 390px) {
+                grid-template-columns: 100px auto;
+            }
+
+            .imgDiv {
+                width: 140px;
+                height: 130px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media only screen and (max-width: 500px) {
+                    width: 120px;
+                    height: 110px;
+                }
+
+                @media only screen and (max-width: 390px) {
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+
+                img {
+                    margin: auto;
+                    display: block;
+                    max-width: 120px;
+                    max-height: 110px;
+
+                    @media only screen and (max-width: 500px) {
+                        max-width: 100px;
+                        max-height: 90px;
+                    }
+
+                    @media only screen and (max-width: 390px) {
+                        max-width: 90px;
+                        max-height: 80px;
+                    }
+                }
+            }
+
+            .Details {
+                padding-top: 15px;
+
+                .oneLineTxt {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 370px;
+
+                    @media only screen and (max-width:992px) {
+                        max-width: 250px;
+                    }
+
+                    @media only screen and (max-width: 540px) {
+                        font-size: 17px;
+                    }
+
+                    @media only screen and (max-width:500px) {
+                        max-width: 200px;
+                    }
+
+                    @media only screen and (max-width:400px) {
+                        max-width: 150px;
+                    }
+
+                    @media only screen and (max-width:335px) {
+                        max-width: 100px;
+                    }
+                }
+            }
+        }
+
+        button[data-for="LoadMore"] {
+            background: $Main2ndBlack;
+            color: white;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            width: 7em;
+            height: 2em;
+            border: 2px solid $Main2ndBlack;
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                background: white;
+                color: $Main2ndBlack;
+            }
+        }
+    }
+
+    .Menu {
+        @media only screen and (max-width: 767px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .BtnDiv {
+            margin-bottom: 1em;
+
+            @media only screen and (max-width:767px) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            button {
+                padding-left: 1em;
+                width: 85%;
+                height: 35px;
+                border-radius: 3px;
+                font-size: small;
+                font-weight: bold;
+                color: $MainBLack;
+                border: 2px solid #22cc9d;
+                text-align: left;
+                background: transparent;
+
+                .span2 {
+                    padding-top: 3px;
+                    padding-left: 1em;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 0;
+
+                    span {
+                        float: left;
+                        width: 2.5em;
+                        padding-left: 1em;
+                    }
+
+                    .span2 {
+                        float: none;
+                        width: auto;
+                    }
+                }
+            }
+
+            .active {
+                color: white;
+                background: #22cc9d;
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import '../app.module.scss';
+
+.AccountComp {
+    background: $MainBgGray;
+
+    .MobNon {
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .MainCard {
+        padding: 3em;
+        background: white;
+        border-radius: 3px;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+        .SubTitle {
+            border-bottom: 2px solid $MainLtGrey;
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 1.5em;
+        }
+
+        form {
+            input {
+                height: 40px;
+                padding-left: 10px;
+                width: 100%;
+                color: $MainBLack;
+                background: $MainBgGray;
+                border: 2px solid $MainBgGray;
+                border-radius: 3px;
+                font-size: 13px;
+                outline: none;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    border-color: $MainGreen;
+                }
+
+                &:focus {
+                    border-color: $MainGreen;
+                }
+            }
+        }
+
+        button {
+            width: 8em;
+            height: 40px;
+            border-radius: 3px;
+            background: $MainGreen;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+            border: 3px solid $MainGreen;
+
+            transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+
+            &:hover {
+                background: white;
+                color: $MainBLack;
+            }
+        }
+    }
+
+    .Menu {
+        @media only screen and (max-width: 767px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .BtnDiv {
+            margin-bottom: 1em;
+
+            @media only screen and (max-width:767px) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            button {
+                padding-left: 1em;
+                width: 85%;
+                height: 35px;
+                border-radius: 3px;
+                font-size: small;
+                font-weight: bold;
+                color: $MainBLack;
+                border: 2px solid #22cc9d;
+                text-align: left;
+                background: transparent;
+
+                .span2 {
+                    padding-top: 3px;
+                    padding-left: 1em;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 0;
+
+                    span {
+                        float: left;
+                        width: 2.5em;
+                        padding-left: 1em;
+                    }
+
+                    .span2{
+                        float: none;
+                        width: auto;
+                    }
+                }
+            }
+
+            .active {
+                color: white;
+                background: #22cc9d;
+            }
+        }
+    }
+}

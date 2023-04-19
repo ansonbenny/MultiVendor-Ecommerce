@@ -1,0 +1,110 @@
+@import '../app.module.scss';
+
+.Vendor {
+    .SettingsComp {
+        margin-bottom: 2em;
+
+        .accDetailsMain {
+            border: 1px solid $MainLtGrey;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            padding: 1em;
+
+            label {
+                font-size: small;
+                padding-top: 7px;
+                color: $MainBLack;
+                text-transform: uppercase;
+            }
+
+            input:disabled {
+                margin-top: 1px;
+                padding-left: 5px;
+                padding-right: 5px;
+                background: $MainBgGray;
+                width: 100%;
+                height: 30px;
+                border: 1px solid $MainLtGrey;
+                color: $MainBLack;
+                font-size: small;
+                border-radius: 3px;
+                outline: none;
+            }
+        }
+
+        div[data-for='updateDetails'] {
+            border: 1px solid $MainLtGrey;
+            border-radius: 5px;
+            height: auto;
+            padding: 1em;
+
+            label {
+                font-size: small;
+                text-transform: uppercase;
+                color: $MainBLack;
+            }
+
+            input {
+                margin-top: 1px;
+                width: 100%;
+                padding-left: 5px;
+                outline: none;
+                height: 30px;
+                border: 1px solid $MainLtGrey;
+                font-size: small;
+                color: $MainBLack;
+                margin-bottom: 5px;
+                border-radius: 3px;
+                background: white;
+            }
+
+            textarea {
+                padding-top: 4px;
+                margin-top: 1px;
+                width: 100%;
+                padding-left: 5px;
+                outline: none;
+                height: 30px;
+                border: 1px solid $MainLtGrey;
+                font-size: small;
+                color: $MainBLack;
+                margin-bottom: 5px;
+                border-radius: 3px;
+                background: white;
+            }
+
+            select {
+                margin-top: 1px;
+                width: 100%;
+                padding-left: 5px;
+                outline: none;
+                height: 30px;
+                border: 1px solid $MainLtGrey;
+                font-size: small;
+                color: $MainBLack;
+                margin-bottom: 5px;
+                border-radius: 3px;
+                background: white;
+            }
+
+            button {
+                width: 7em;
+                height: 30px;
+                border: 2px solid $Main2ndGreen;
+                color: white;
+                background: $Main2ndGreen;
+                text-transform: uppercase;
+                font-size: small;
+                border-radius: 3px;
+                margin-top: 5px;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover {
+                    background: none;
+                    color: $MainBLack;
+                }
+            }
+        }
+    }
+}

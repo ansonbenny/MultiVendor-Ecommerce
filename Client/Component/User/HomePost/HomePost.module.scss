@@ -1,0 +1,236 @@
+@import "../../../styles/app.module.scss";
+
+.HomePost {
+
+    .UserCateSlidCard {
+        position: relative;
+        width: auto;
+        height: 240px;
+        border-radius: 3px;
+
+        @media only screen and (max-width: 450px) {
+            height: 200px;
+        }
+
+        .InnerDiv {
+            width: auto;
+            height: 230px;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+
+            @media only screen and (max-width: 450px) {
+                height: 190px;
+            }
+
+            &:hover {
+                height: 170px;
+                background: $MainBgGray;
+                border-radius: 3px;
+
+                @media only screen and (max-width: 450px) {
+                    height: 150px;
+                }
+
+                @media only screen and (max-width: 335px) {
+                    height: 130px;
+                }
+            }
+
+            .UserCateSlidImgDiv {
+                padding-top: 10px;
+                border-radius: 3px;
+                width: auto;
+                height: 180px;
+                transition: all .5s;
+                -moz-transition: all .5s;
+                transition-timing-function: ease-in-out;
+                -moz-transition-timing-function: ease-in-out;
+                cursor: pointer;
+
+                @media only screen and (max-width: 450px) {
+                    height: 160px;
+                }
+
+                @media only screen and (max-width: 335px) {
+                    height: 140px;
+                }
+
+                .UserCateSlidImg {
+                    width: auto;
+                    height: auto;
+                    max-width: 150px;
+                    max-height: 150px;
+
+                    @media only screen and (max-width: 450px) {
+                        max-width: 130px;
+                        max-height: 130px;
+                    }
+
+                    @media only screen and (max-width: 335px) {
+                        max-width: 110px;
+                        max-height: 110px;
+                    }
+                }
+            }
+        }
+    }
+
+    .UserMainProCard {
+        width: auto;
+        height: 300px;
+        border-radius: 3px;
+        position: relative;
+
+        .UserMainProimgDiv {
+            height: 170px;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 3px;
+            width: auto;
+            background: white;
+
+            @media only screen and (max-width: 450px) {
+                height: 160px;
+            }
+
+            @media only screen and (max-width: 335px) {
+                height: 140px;
+            }
+
+            img {
+                width: auto;
+                height: auto;
+                max-width: 150px;
+                max-height: 150px;
+
+                @media only screen and (max-width: 450px) {
+                    max-width: 130px;
+                    max-height: 130px;
+                }
+
+                @media only screen and (max-width: 335px) {
+                    max-width: 110px;
+                    max-height: 110px;
+                }
+            }
+
+            .offerGreen {
+                position: absolute;
+                left: 6%;
+                top: 6%;
+                background: $Main2ndGreen;
+                color: white;
+                border: none;
+                font-size: small;
+                width: 3em;
+                border-radius: 3px;
+                cursor: text;
+            }
+        }
+
+        .cartBtn {
+            color: #333;
+            border: 1px solid $MainLtGrey;
+            background: white;
+            position: absolute;
+            right: 10%;
+            top: 10%;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: none;
+
+            &:hover {
+                color: $MainGreen;
+                border: 1px solid $MainGreen;
+            }
+        }
+
+        .QuickViewDiv {
+            background: $Main2ndGreen;
+            height: 45px;
+            position: absolute;
+            width: 100%;
+            top: 43%;
+            font-size: small;
+            border: none;
+            display: none;
+
+            @media only screen and (max-width: 450px) {
+                top: 38%;
+            }
+
+            @media only screen and (max-width: 335px) {
+                top: 32%;
+            }
+        }
+
+        &:hover .cartBtn {
+            display: block;
+        }
+
+        &:hover .QuickViewDiv {
+            display: block;
+        }
+    }
+
+    .usrLastHmMainDiv {
+        width: auto;
+        position: relative;
+
+        .usrLastHmGrid {
+            display: grid;
+            grid-template-columns: 110px auto;
+            background: white;
+            border-radius: 3px;
+            padding: 10px;
+
+            .UsrImgdivHomeLast {
+                display: flex;
+                text-align: center;
+                height: 100px;
+                width: 100px;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    margin: auto;
+                    display: block;
+                    max-width: 100px;
+                    max-height: 100px;
+                }
+            }
+
+            .proName {
+                max-width: 200px;
+
+                @media only screen and (max-width:372px) {
+                    max-width: 170px;
+                }
+
+                @media only screen and (max-width:343px) {
+                    max-width: 150px;
+                }
+
+                @media only screen and (max-width:320px) {
+                    max-width: 100px;
+                }
+            }
+
+            .category {
+                max-width: 150px;
+
+                @media only screen and (max-width:343px) {
+                    max-width: 100px;
+                }
+
+                @media only screen and (max-width:320px) {
+                    max-width: 70px;
+                }
+            }
+        }
+    }
+
+}

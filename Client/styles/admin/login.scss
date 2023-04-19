@@ -1,0 +1,70 @@
+@import '../app.module.scss';
+
+.Admin {
+    .Login {
+        background: $MainBgGray;
+        padding: 1em;
+
+        @media only screen and (min-width: 767px) {
+            padding-left: 35%;
+            padding-right: 35%;
+        }
+
+        form {
+            h4 {
+                font-weight: bold;
+                color: $MainBLack;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            label {
+                margin-top: 3px;
+                color: $MainBLack;
+            }
+
+            input {
+                padding-left: 5px;
+                width: 100%;
+                color: $MainBLack;
+                font-size: small;
+                outline: none;
+                height: 33px;
+                border: 2px solid $MainGreen;
+                border-radius: 3px;
+            }
+
+            .passGrid {
+                display: grid;
+                grid-template-columns: 85% 15%;
+
+                button[data-for="pass"]{
+                    height: 33px;
+                    background: $MainGreen;
+                    border: 2px solid $MainGreen;
+                    border-radius: 3px;
+                    margin-left: -5px;
+                }
+            }
+
+            button[type='submit']{
+                width: 100%;
+                border: 2px solid $MainBLack;
+                color: white;
+                font-weight: bold;
+                background: $MainBLack;
+                height: 33px;
+                margin-top: 10px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                transition: all .5s ease-in-out;
+                -moz-transition: all .5s ease-in-out;
+
+                &:hover{
+                    background: white;
+                    color: $MainBLack;
+                }
+            }
+        }
+    }
+}

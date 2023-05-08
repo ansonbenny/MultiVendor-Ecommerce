@@ -13,7 +13,7 @@ Make sure you have installed all of the following prerequisites on your developm
 
 ## Technology Used
 
-#reactjs #css 
+#nextjs #reactjs #scss 
 
 #nodejs #expressjs #mongodb #jsonwebtoken authentication 
 

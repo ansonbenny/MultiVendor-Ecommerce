@@ -3,23 +3,6 @@ Multi Vendor ecommerce website for online shopping, it's
 allows multi vendor features to allow sellers to sell on this
 website.
 
-## Prerequisites
-
-Make sure you have installed all of the following prerequisites on your development machine:
-
-- Node Js & Npm [Download and Install](https://nodejs.org/en)
-- MongoDB [Download and Install](https://www.mongodb.com/docs/manual/installation/)
-- Git [Download and Install](https://git-scm.com/downloads)
-
-## Technology Used
-
-#nextjs #reactjs #scss 
-
-#nodejs #expressjs #mongodb #jsonwebtoken authentication 
-
-#javascript
-
-
 ## Main Features
 
 - Pwa
@@ -37,6 +20,22 @@ Make sure you have installed all of the following prerequisites on your developm
 - Razorpay Offers Accessible
 - Cupon Code
 - User Can Manage Address [Add , Edit , Delete]
+
+## Prerequisites
+
+Make sure you have installed all of the following prerequisites on your development machine:
+
+- Node Js & Npm [Download and Install](https://nodejs.org/en)
+- MongoDB [Download and Install](https://www.mongodb.com/docs/manual/installation/)
+- Git [Download and Install](https://git-scm.com/downloads)
+
+## Technology Used
+
+#nextjs #reactjs #scss 
+
+#nodejs #expressjs #mongodb #jsonwebtoken authentication 
+
+#javascript
 
 ## Environment Variables
 

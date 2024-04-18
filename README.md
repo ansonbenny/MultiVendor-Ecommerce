@@ -59,7 +59,7 @@ To run this project, you will need to add the following environment variables to
 
 `MAIL_PASS`
 
-`MAIL_PASS` = `Ecommerce <email@gmail.com>`
+`MAIL_FROM‎` = `Ecommerce <email@gmail.com>`
 
 `ADMIN_MAIL`
 
